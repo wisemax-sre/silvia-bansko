@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жк Сильвия — Квартиры в Банско</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Rubik', sans-serif;
+      color: #222;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1580128637396-9fa3dd38a7a5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #ffd700;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      margin-top: 1rem;
+    }
+    .section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1e3a8a;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .features div {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <h1>Жилой комплекс «Сильвия»</h1>
+      <p>Квартиры на горнолыжном курорте Банско</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Преимущества</h2>
+    <div class="features">
+      <div>🏠 Панорамные окна, тёплые полы</div>
+      <div>🏦 Спа-центр, подземный паркинг</div>
+      <div>⛷️ 5 минут до подъёмника</div>
+      <div>🏡 От 35 до 100 м², с ремонтом и мебелью</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Свяжитесь с нами</h2>
+    <p>Узнайте о доступных квартирах, ценах и вариантах оплаты.</p>
+    <p>Email: info@silvia-bansko.com</p>
+    <p>Телефон: +359 88 888 8888</p>
+  </section>
+
+  <footer>
+    © 2025 Жк Сильвия, Банско. Все права защищены.
+  </footer>
+</body>
+</html>
