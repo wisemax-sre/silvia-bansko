@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Жк Сильвия — Квартиры в Банско</title>
+  <title>ЖК Сильвия — Квартиры в Банско</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,11 +14,10 @@
       line-height: 1.6;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1580128637396-9fa3dd38a7a5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1580128637396-9fa3dd38a7a5?auto=format&fit=crop&w=1920&q=60') center/cover no-repeat;
       height: 100vh;
       color: white;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -29,49 +28,83 @@
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0,0,0,0.5);
-      z-index: 0;
     }
     header .content {
       position: relative;
       z-index: 1;
+      padding: 0 1rem;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
       color: #ffd700;
-      text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
     header p {
-      font-size: 1.2rem;
-      color: #f0f0f0;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
       margin-top: 1rem;
     }
     .section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 4rem auto;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
     }
     .section h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       color: #1e3a8a;
+      text-align: center;
     }
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .features div {
       background: white;
-      padding: 1.5rem;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .features div:hover {
+      transform: translateY(-5px);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      loading: lazy;
+    }
+    .contact p {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #2b52c4;
     }
     footer {
       background: #1e3a8a;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
@@ -79,29 +112,39 @@
   <header>
     <div class="content">
       <h1>Жилой комплекс «Сильвия»</h1>
-      <p>Квартиры на горнолыжном курорте Банско</p>
+      <p>Комфортные квартиры на горнолыжном курорте Банско</p>
     </div>
   </header>
 
   <section class="section">
-    <h2>Преимущества</h2>
+    <h2>Почему выбирают нас</h2>
     <div class="features">
-      <div>🏠 Панорамные окна, тёплые полы</div>
-      <div>🏦 Спа-центр, подземный паркинг</div>
-      <div>⛷️ 5 минут до подъёмника</div>
-      <div>🏡 От 35 до 100 м², с ремонтом и мебелью</div>
+      <div>🏠 Панорамные окна и тёплые полы</div>
+      <div>🏦 Спа-центр и подземный паркинг</div>
+      <div>⛷️ Всего 5 минут до подъёмника</div>
+      <div>🏡 От 35 до 100 м² с ремонтом и мебелью</div>
     </div>
   </section>
 
   <section class="section">
+    <h2>Взгляните на красоту</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1542601098-8fc114e401e2?auto=format&fit=crop&w=600&q=60" alt="Горы Банско">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=60" alt="Интерьер квартиры">
+      <img src="https://images.unsplash.com/photo-1514893501579-364c7699952d?auto=format&fit=crop&w=600&q=60" alt="Вид из окна">
+    </div>
+  </section>
+
+  <section class="section contact">
     <h2>Свяжитесь с нами</h2>
-    <p>Узнайте о доступных квартирах, ценах и вариантах оплаты.</p>
-    <p>Email: info@silvia-bansko.com</p>
-    <p>Телефон: +359 88 888 8888</p>
+    <p>Узнайте о доступных квартирах, ценах и вариантах оплаты</p>
+    <p>Email: <a href="mailto:info@silvia-bansko.com">info@silvia-bansko.com</a></p>
+    <p>Телефон: <a href="tel:+359888888888">+359 88 888 8888</a></p>
+    <a href="mailto:info@silvia-bansko.com" class="btn">Написать нам</a>
   </section>
 
   <footer>
-    © 2025 Жк Сильвия, Банско. Все права защищены.
+    © 2025 ЖК Сильвия, Банско. Все права защищены.
   </footer>
 </body>
 </html>
