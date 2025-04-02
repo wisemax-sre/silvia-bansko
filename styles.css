@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F5E8C7;
     color: #1A3C34;
-    direction: rtl; /* Для иврита */
+    direction: rtl;
     text-align: right;
 }
 
@@ -18,7 +18,7 @@ h1, h2, h3 {
     top: 0;
     width: 100%;
     background: rgba(26, 60, 52, 0.9);
-    padding: 20px;
+    padding: 10px; /* Уменьшено с 20px до 10px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +29,7 @@ h1, h2, h3 {
     color: #D4A017;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавлена тень */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links {
@@ -48,7 +48,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавлена тень */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links a:hover {
@@ -80,6 +80,10 @@ h1, h2, h3 {
     color: #F5E8C7;
 }
 
+.hero-content {
+    margin-top: -100px; /* Поднимаем текст выше */
+}
+
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -89,6 +93,7 @@ h1, h2, h3 {
 .hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #000; /* Вторая строка теперь черная */
 }
 
 .cta-button {
@@ -162,39 +167,4 @@ h1, h2, h3 {
     background: #1A3C34;
     color: #F5E8C7;
     text-decoration: none;
-    border-radius: 20px;
-    transition: background 0.3s;
-}
-
-.card-button:hover {
-    background: #D4A017;
-}
-
-/* Футер */
-footer {
-    background: #1A3C34;
-    color: #F5E8C7;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    font-size: 24px;
-    color: #D4A017;
-    margin-bottom: 10px;
-}
-
-.social-links a {
-    color: #F5E8C7;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #D4A017;
-}
+   
