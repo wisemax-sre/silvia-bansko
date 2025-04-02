@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בית - בנסקו דום</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar">
+            <div class="logo" data-lang="logo">בנסקו דום</div>
+            <ul class="nav-links">
+                <li><a href="home.html" data-lang="home">בית</a></li>
+                <li><a href="index.html" data-lang="apartments">דירות</a></li>
+                <li><a href="#" data-lang="about">על בנסקו</a></li>
+                <li><a href="#" data-lang="contacts">צור קשר</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="language" onchange="changeLanguage()">
+                    <option value="he">עברית</option>
+                    <option value="ru">Русский</option>
+                    <option value="bg">Български</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Секция с домом -->
+    <section class="house-section">
+        <h1 data-lang="house-title">הבית שלנו בבנסקו</h1>
+        <div class="house-content">
+            <img src="bansko-house.jpg" alt="הבית שלנו בבנסקו" class="house-image">
+            <div class="house-description">
+                <p data-lang="house-description-1">הבית ממוקם במרחק של 5 דקות הליכה בלבד מהמעלית!</p>
+                <p data-lang="house-description-2">בקרבת מקום יש מסעדות וסופרמרקטים - תשתית נוחה מאוד.</p>
+                <p data-lang="house-description-3">קרוב מאוד לגונדולה, מה שהופך את המיקום למושלם לחופשת סקי.</p>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.318614614614!2d23.485698315614614!3d41.836614979614614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ac1b5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sBansko%20Ski%20Lift!5e0!3m2!1sen!2sbg!4v1698771234567!5m2!1sen!2sbg" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" data-lang="logo">בנסקו דום</div>
+            <p data-lang="footer-copyright">© 2025 כל הזכויות שמורות</p>
+            <div class="social-links">
+                <a href="#" data-lang="telegram">Telegram</a>
+                <a href="#" data-lang="instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
