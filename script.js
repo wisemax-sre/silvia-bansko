@@ -16,6 +16,10 @@ const translations = {
         "lift-apartment-title": "דירה ליד המעלית",
         "lift-apartment-details": '85 מ"ר | 95,000 €',
         "details-button": "פרטים נוספים",
+        "house-title": "הבית שלנו בבנסקו",
+        "house-description-1": "הבית ממוקם במרחק של 5 דקות הליכה בלבד מהמעלית!",
+        "house-description-2": "בקרבת מקום יש מסעדות וסופרמרקטים - תשתית נוחה מאוד.",
+        "house-description-3": "קרוב מאוד לגונדולה, מה שהופך את המיקום למושלם לחופשת סקי.",
         "footer-copyright": "© 2025 כל הזכויות שמורות",
         telegram: "Telegram",
         instagram: "Instagram"
@@ -37,6 +41,10 @@ const translations = {
         "lift-apartment-title": "Квартира у подъемника",
         "lift-apartment-details": "85 м² | 95 000 €",
         "details-button": "Подробнее",
+        "house-title": "Наш дом в Банско",
+        "house-description-1": "Дом находится всего в 5 минутах ходьбы от подъемника!",
+        "house-description-2": "Рядом есть рестораны и супермаркеты — очень удобная инфраструктура.",
+        "house-description-3": "Очень близко к гондоле, что делает расположение идеальным для лыжного отдыха.",
         "footer-copyright": "© 2025 Все права защищены",
         telegram: "Telegram",
         instagram: "Instagram"
@@ -58,6 +66,10 @@ const translations = {
         "lift-apartment-title": "Апартамент до лифта",
         "lift-apartment-details": "85 м² | 95 000 €",
         "details-button": "Повече",
+        "house-title": "Нашият дом в Банско",
+        "house-description-1": "Къщата е само на 5 минути пеша от лифта!",
+        "house-description-2": "В близост има ресторанти и супермаркети — много удобна инфраструктура.",
+        "house-description-3": "Много близо до гондолата, което прави местоположението идеално за ски почивка.",
         "footer-copyright": "© 2025 Всички права запазени",
         telegram: "Telegram",
         instagram: "Instagram"
@@ -71,7 +83,6 @@ function changeLanguage() {
         element.textContent = translations[lang][key];
     });
 
-    // Меняем направление текста
     if (lang === "he") {
         document.body.style.direction = "rtl";
         document.body.style.textAlign = "right";
@@ -81,5 +92,4 @@ function changeLanguage() {
     }
 }
 
-// Устанавливаем иврит по умолчанию
 changeLanguage();
