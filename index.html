@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Квартиры в Банско</title>
+    <title>דירות בבנסקו</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -11,46 +11,53 @@
     <!-- Шапка -->
     <header>
         <nav class="navbar">
-            <div class="logo">Банско Дом</div>
+            <div class="logo" data-lang="logo">בנסקו דום</div>
             <ul class="nav-links">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Квартиры</a></li>
-                <li><a href="#">О Банско</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#" data-lang="home">בית</a></li>
+                <li><a href="#" data-lang="apartments">דירות</a></li>
+                <li><a href="#" data-lang="about">על בנסקו</a></li>
+                <li><a href="#" data-lang="contacts">צור קשר</a></li>
             </ul>
+            <div class="language-switcher">
+                <select id="language" onchange="changeLanguage()">
+                    <option value="he">עברית</option>
+                    <option value="ru">Русский</option>
+                    <option value="bg">Български</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <!-- Герой -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Ваш дом в сердце Банско</h1>
-            <p>Найдите идеальную квартиру в горах</p>
-            <a href="#" class="cta-button">Найти квартиру мечты</a>
+            <h1 data-lang="hero-title">הבית שלך בלב בנסקו</h1>
+            <p data-lang="hero-subtitle">מצא את הדירה המושלמת בהרים</p>
+            <a href="#" class="cta-button" data-lang="hero-button">מצא את דירת החלומות שלך</a>
         </div>
     </section>
 
     <!-- Каталог квартир -->
     <section class="apartments">
-        <h2>Наши предложения</h2>
+        <h2 data-lang="apartments-title">ההצעות שלנו</h2>
         <div class="apartment-grid">
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Уютная студия в Банско">
-                <h3>Уютная студия</h3>
-                <p>35 м² | 45 000 €</p>
-                <a href="#" class="card-button">Подробнее</a>
+                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="סטודיו נעים בבנסקו">
+                <h3 data-lang="studio-title">סטודיו נעים</h3>
+                <p data-lang="studio-details">35 מ"ר | 45,000 €</p>
+                <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Апартаменты с видом в Банско">
-                <h3>Апартаменты с видом</h3>
-                <p>60 м² | 70 000 €</p>
-                <a href="#" class="card-button">Подробнее</a>
+                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה עם נוף בבנסקו">
+                <h3 data-lang="view-apartment-title">דירה עם נוף</h3>
+                <p data-lang="view-apartment-details">60 מ"ר | 70,000 €</p>
+                <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Квартира у подъемника в Банско">
-                <h3>Квартира у подъемника</h3>
-                <p>85 м² | 95 000 €</p>
-                <a href="#" class="card-button">Подробнее</a>
+                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה ליד המעלית בבנסקו">
+                <h3 data-lang="lift-apartment-title">דירה ליד המעלית</h3>
+                <p data-lang="lift-apartment-details">85 מ"ר | 95,000 €</p>
+                <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
             </div>
         </div>
     </section>
@@ -58,13 +65,15 @@
     <!-- Футер -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Банско Дом</div>
-            <p>© 2025 Все права защищены</p>
+            <div class="footer-logo" data-lang="logo">בנסקו דום</div>
+            <p data-lang="footer-copyright">© 2025 כל הזכויות שמורות</p>
             <div class="social-links">
-                <a href="#">Telegram</a>
-                <a href="#">Instagram</a>
+                <a href="#" data-lang="telegram">Telegram</a>
+                <a href="#" data-lang="instagram">Instagram</a>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
