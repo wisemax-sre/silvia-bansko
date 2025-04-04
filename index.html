@@ -13,7 +13,7 @@
         <nav class="navbar">
             <div class="logo" data-lang="logo">בנסקו דום</div>
             <ul class="nav-links">
-                <li><a href="home.html" data-lang="home">בית</a></li>
+                <li><a href="#" data-lang="home">בית</a></li>
                 <li><a href="#" data-lang="apartments">דירות</a></li>
                 <li><a href="#" data-lang="about">על בנסקו</a></li>
                 <li><a href="#" data-lang="contacts">צור קשר</a></li>
@@ -40,27 +40,383 @@
     <!-- Каталог квартир -->
     <section class="apartments">
         <h2 data-lang="apartments-title">ההצעות שלנו</h2>
+
+        <!-- Вкладки с поэтажными планами -->
+        <div class="floor-plans">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'basement')" data-lang="basement-tab">סוטרן</button>
+                <button class="tab-button" onclick="openTab(event, 'first-floor')" data-lang="first-floor-tab">קומה ראשונה</button>
+                <button class="tab-button" onclick="openTab(event, 'second-floor')" data-lang="second-floor-tab">קומה שנייה</button>
+                <button class="tab-button" onclick="openTab(event, 'third-floor')" data-lang="third-floor-tab">קומה שלישית</button>
+                <button class="tab-button" onclick="openTab(event, 'fourth-floor')" data-lang="fourth-floor-tab">קומה רביעית</button>
+                <button class="tab-button" onclick="openTab(event, 'attic')" data-lang="attic-tab">קומת גג</button>
+            </div>
+
+            <!-- Сутерен -->
+            <div id="basement" class="tab-content active">
+                <img src="basement.jpg" alt="План подвала (Сутерен)">
+                <p data-lang="basement-note">אזור לא למגורים - חניונים (P1–P19)</p>
+            </div>
+
+            <!-- Первый этаж -->
+            <div id="first-floor" class="tab-content">
+                <img src="first-floor.jpg" alt="План первого этажа (Първи етаж)">
+                <table class="apartments-table">
+                    <thead>
+                        <tr>
+                            <th data-lang="table-number">מספר</th>
+                            <th data-lang="table-type">סוג</th>
+                            <th data-lang="table-area">שטח (מ"ר)</th>
+                            <th data-lang="table-price">מחיר (€)</th>
+                            <th data-lang="table-status">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.83</td>
+                            <td>56,547</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>2-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>49.71</td>
+                            <td>44,739</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>3-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>76.45</td>
+                            <td>68,805</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>1-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.83</td>
+                            <td>53,406</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>2-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>49.71</td>
+                            <td>53,406</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>3-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>76.45</td>
+                            <td>64,983</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Второй этаж -->
+            <div id="second-floor" class="tab-content">
+                <img src="second-floor.jpg" alt="План второго этажа (Втори етаж)">
+                <table class="apartments-table">
+                    <thead>
+                        <tr>
+                            <th data-lang="table-number">מספר</th>
+                            <th data-lang="table-type">סוג</th>
+                            <th data-lang="table-area">שטח (מ"ר)</th>
+                            <th data-lang="table-price">מחיר (€)</th>
+                            <th data-lang="table-status">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>67.84</td>
+                            <td>61,056</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>5-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>64.46</td>
+                            <td>58,014</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>6-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.63</td>
+                            <td>56,367</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>7-A</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>29.31</td>
+                            <td>26,379</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>4-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>67.84</td>
+                            <td>57,664</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>5-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>64.46</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>6-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.63</td>
+                            <td>53,236</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>7-Б</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>29.31</td>
+                            <td>24,914</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Третий этаж -->
+            <div id="third-floor" class="tab-content">
+                <img src="third-floor.jpg" alt="План третьего этажа (Трети етаж)">
+                <table class="apartments-table">
+                    <thead>
+                        <tr>
+                            <th data-lang="table-number">מספר</th>
+                            <th data-lang="table-type">סוג</th>
+                            <th data-lang="table-area">שטח (מ"ר)</th>
+                            <th data-lang="table-price">מחיר (€)</th>
+                            <th data-lang="table-status">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="sold">
+                            <td>8-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>67.84</td>
+                            <td>61,056</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>9-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>64.46</td>
+                            <td>58,014</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>10-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.63</td>
+                            <td>56,367</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>11-A</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>29.31</td>
+                            <td>26,379</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>8-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>67.84</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>9-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>64.46</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>10-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>62.63</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>11-Б</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>29.31</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Четвертый этаж -->
+            <div id="fourth-floor" class="tab-content">
+                <img src="fourth-floor.jpg" alt="План четвертого этажа (Четвърти етаж)">
+                <table class="apartments-table">
+                    <thead>
+                        <tr>
+                            <th data-lang="table-number">מספר</th>
+                            <th data-lang="table-type">סוג</th>
+                            <th data-lang="table-area">שטח (מ"ר)</th>
+                            <th data-lang="table-price">מחיר (€)</th>
+                            <th data-lang="table-status">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12-A</td>
+                            <td data-lang="three-room-duplex">תלת-חדרי דופלקס</td>
+                            <td>75.16</td>
+                            <td>67,644</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>13-A</td>
+                            <td data-lang="three-room-duplex">תלת-חדרי דופלקס</td>
+                            <td>67.39</td>
+                            <td>60,651</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>14-A</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>48.28</td>
+                            <td>43,452</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>15-A</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>53.05</td>
+                            <td>47,745</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>12-Б</td>
+                            <td data-lang="three-room-duplex">תלת-חדרי דופלקס</td>
+                            <td>75.16</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>13-Б</td>
+                            <td data-lang="three-room-duplex">תלת-חדרי דופלקס</td>
+                            <td>67.39</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>14-Б</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>48.28</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>15-Б</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>53.05</td>
+                            <td>45,093</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Мансардный этаж -->
+            <div id="attic" class="tab-content">
+                <img src="fifth-floor.jpg" alt="План мансардного этажа (Тавански етаж)">
+                <table class="apartments-table">
+                    <thead>
+                        <tr>
+                            <th data-lang="table-number">מספר</th>
+                            <th data-lang="table-type">סוג</th>
+                            <th data-lang="table-area">שטח (מ"ר)</th>
+                            <th data-lang="table-price">מחיר (€)</th>
+                            <th data-lang="table-status">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="sold">
+                            <td>16-A</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>22.03</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>17-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>53.85</td>
+                            <td data-lang="price-on-request">מחיר לפי בקשה</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr class="sold">
+                            <td>18-A</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>42.12</td>
+                            <td>18,726</td>
+                            <td data-lang="sold">נמכר</td>
+                        </tr>
+                        <tr>
+                            <td>16-Б</td>
+                            <td data-lang="studio">סטודיו</td>
+                            <td>22.03</td>
+                            <td>18,726</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>17-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>53.85</td>
+                            <td>45,773</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                        <tr>
+                            <td>18-Б</td>
+                            <td data-lang="two-room">דו-חדרי</td>
+                            <td>42.12</td>
+                            <td>35,802</td>
+                            <td data-lang="available">זמין</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Карточки квартир -->
         <div class="apartment-grid">
             <div class="apartment-card">
-                <div class="image-wrapper">
-                    <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="סטודיו נעים בבנסקו">
-                </div>
+                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="סטודיו נעים בבנסקו">
                 <h3 data-lang="studio-title">סטודיו נעים</h3>
                 <p data-lang="studio-details">35 מ"ר | 45,000 €</p>
                 <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <div class="image-wrapper">
-                    <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה עם נוף בבנסקו">
-                </div>
+                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה עם נוף בבנסקו">
                 <h3 data-lang="view-apartment-title">דירה עם נוף</h3>
                 <p data-lang="view-apartment-details">60 מ"ר | 70,000 €</p>
                 <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <div class="image-wrapper">
-                    <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה ליד המעלית בבנסקו">
-                </div>
+                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה ליד המעלית בבנסקו">
                 <h3 data-lang="lift-apartment-title">דירה ליד המעלית</h3>
                 <p data-lang="lift-apartment-details">85 מ"ר | 95,000 €</p>
                 <a href="#" class="card-button" data-lang="details-button">פרטים נוספים</a>
