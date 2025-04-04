@@ -9,20 +9,26 @@ const translations = {
         "hero-subtitle": "מצא את הדירה המושלמת בהרים",
         "hero-button": "מצא את דירת החלומות שלך",
         "apartments-title": "ההצעות שלנו",
-        "studio-title": "סטודיו נעים",
-        "studio-details": '35 מ"ר | 45,000 €',
-        "view-apartment-title": "דירה עם נוף",
-        "view-apartment-details": '60 מ"ר | 70,000 €',
-        "lift-apartment-title": "דירה ליד המעלית",
-        "lift-apartment-details": '85 מ"ר | 95,000 €',
-        "details-button": "פרטים נוספים",
-        "house-title": "הבית שלנו בבנסקו",
-        "house-description-1": "הבית ממוקם במרחק של 5 דקות הליכה בלבד מהמעלית!",
-        "house-description-2": "בקרבת מקום יש מסעדות וסופרמרקטים - תשתית נוחה מאוד.",
-        "house-description-3": "קרוב מאוד לגונדולה, מה שהופך את המיקום למושלם לחופשת סקי.",
+        "about-title": "על בנסקו",
+        "about-description": "בנסקו היא עיירה יפהפייה בדרום-מערב בולגריה, הידועה בזכות אתר הסקי שלה ובארכיטקטורה המסורתית. ממוקמת למרגלות הרי פירין, היא מציעה נופים עוצרי נשימה ופעילויות חוץ כל השנה.",
+        "contacts-title": "צור קשר",
+        "contacts-description": "לפרטים נוספים, אנא צור קשר איתנו בטלפון או בדוא\"ל.",
         "footer-copyright": "© 2025 כל הזכויות שמורות",
         telegram: "Telegram",
-        instagram: "Instagram"
+        instagram: "Instagram",
+        "basement-tab": "סוטרן",
+        "first-floor-tab": "קומה ראשונה",
+        "second-floor-tab": "קומה שנייה",
+        "third-floor-tab": "קומה שלישית",
+        "fourth-floor-tab": "קומה רביעית",
+        "attic-tab": "קומת גג",
+        "apartment-1-title": "דירה דו-חדרית",
+        "apartment-1-desc": "62.83 מ\"ר, מרפסת עם נוף להרים",
+        "apartment-2-title": "סטודיו נעים",
+        "apartment-2-desc": "29.31 מ\"ר, מושלם לזוג",
+        "apartment-3-title": "דופלקס משפחתי",
+        "apartment-3-desc": "75.16 מ\"ר, מרווח ונוח",
+        details: "פרטים נוספים"
     },
     ru: {
         logo: "Банско Дом",
@@ -34,20 +40,26 @@ const translations = {
         "hero-subtitle": "Найдите идеальную квартиру в горах",
         "hero-button": "Найти квартиру мечты",
         "apartments-title": "Наши предложения",
-        "studio-title": "Уютная студия",
-        "studio-details": "35 м² | 45 000 €",
-        "view-apartment-title": "Апартаменты с видом",
-        "view-apartment-details": "60 м² | 70 000 €",
-        "lift-apartment-title": "Квартира у подъемника",
-        "lift-apartment-details": "85 м² | 95 000 €",
-        "details-button": "Подробнее",
-        "house-title": "Наш дом в Банско",
-        "house-description-1": "Дом находится всего в 5 минутах ходьбы от подъемника!",
-        "house-description-2": "Рядом есть рестораны и супермаркеты — очень удобная инфраструктура.",
-        "house-description-3": "Очень близко к гондоле, что делает расположение идеальным для лыжного отдыха.",
+        "about-title": "О Банско",
+        "about-description": "Банско — красивый городок на юго-западе Болгарии, известный своим горнолыжным курортом и традиционной архитектурой. Расположенный у подножия Пиринских гор, он предлагает захватывающие виды и круглогодичные активности на свежем воздухе.",
+        "contacts-title": "Контакты",
+        "contacts-description": "Для получения дополнительной информации, пожалуйста, свяжитесь с нами по телефону или электронной почте.",
         "footer-copyright": "© 2025 Все права защищены",
         telegram: "Telegram",
-        instagram: "Instagram"
+        instagram: "Instagram",
+        "basement-tab": "Подвал",
+        "first-floor-tab": "Первый этаж",
+        "second-floor-tab": "Второй этаж",
+        "third-floor-tab": "Третий этаж",
+        "fourth-floor-tab": "Четвертый этаж",
+        "attic-tab": "Мансардный этаж",
+        "apartment-1-title": "Двухкомнатная квартира",
+        "apartment-1-desc": "62.83 м², балкон с видом на горы",
+        "apartment-2-title": "Уютная студия",
+        "apartment-2-desc": "29.31 м², идеально для пары",
+        "apartment-3-title": "Семейный дуплекс",
+        "apartment-3-desc": "75.16 м², просторный и удобный",
+        details: "Подробнее"
     },
     bg: {
         logo: "Банско Дом",
@@ -59,20 +71,26 @@ const translations = {
         "hero-subtitle": "Намерете идеалния апартамент в планините",
         "hero-button": "Намери апартамент на мечтите си",
         "apartments-title": "Нашите предложения",
-        "studio-title": "Уютно студио",
-        "studio-details": "35 м² | 45 000 €",
-        "view-apartment-title": "Апартамент с гледка",
-        "view-apartment-details": "60 м² | 70 000 €",
-        "lift-apartment-title": "Апартамент до лифта",
-        "lift-apartment-details": "85 м² | 95 000 €",
-        "details-button": "Повече",
-        "house-title": "Нашият дом в Банско",
-        "house-description-1": "Къщата е само на 5 минути пеша от лифта!",
-        "house-description-2": "В близост има ресторанти и супермаркети — много удобна инфраструктура.",
-        "house-description-3": "Много близо до гондолата, което прави местоположението идеално за ски почивка.",
+        "about-title": "За Банско",
+        "about-description": "Банско е красив град в югозападна България, известен със ски курорта си и традиционната архитектура. Разположен в подножието на Пирин планина, той предлага спиращи дъха гледки и целогодишни активности на открито.",
+        "contacts-title": "Контакти",
+        "contacts-description": "За повече информация, моля, свържете се с нас по телефон или имейл.",
         "footer-copyright": "© 2025 Всички права запазени",
         telegram: "Telegram",
-        instagram: "Instagram"
+        instagram: "Instagram",
+        "basement-tab": "Сутерен",
+        "first-floor-tab": "Първи етаж",
+        "second-floor-tab": "Втори етаж",
+        "third-floor-tab": "Трети етаж",
+        "fourth-floor-tab": "Четвърти етаж",
+        "attic-tab": "Тавански етаж",
+        "apartment-1-title": "Двустаен апартамент",
+        "apartment-1-desc": "62.83 м², балкон с изглед към планините",
+        "apartment-2-title": "Уютно студио",
+        "apartment-2-desc": "29.31 м², перфектно за двойка",
+        "apartment-3-title": "Семеен дуплекс",
+        "apartment-3-desc": "75.16 м², просторен и удобен",
+        details: "Повече информация"
     }
 };
 
@@ -90,6 +108,32 @@ function changeLanguage() {
         document.body.style.direction = "ltr";
         document.body.style.textAlign = "left";
     }
+}
+
+function openSection(evt, sectionName) {
+    document.querySelectorAll(".section").forEach(section => {
+        section.classList.remove("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.classList.remove("active");
+    });
+
+    document.getElementById(sectionName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+
+function openFloorTab(evt, tabName) {
+    document.querySelectorAll(".floor-tab-content").forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    document.querySelectorAll(".floor-tab-button").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
 }
 
 changeLanguage();
