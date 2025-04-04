@@ -286,3 +286,6 @@ footer {
 .social-links a:hover {
     color: #D4A017;
 }
+.apartments-list li {
+    direction: ltr;
+}
