@@ -1,86 +1,185 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>דירות בבנסקו</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דירות בבנסקו</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">בנסקו דום</div>
-      <ul class="nav-links">
-        <li><a href="#" onclick="openSection(event, 'home-section')">בית</a></li>
-        <li><a href="#" onclick="openSection(event, 'apartments-section')">דירות</a></li>
-        <li><a href="#" onclick="openSection(event, 'about-section')">על בנסקו</a></li>
-        <li><a href="#" onclick="openSection(event, 'contacts-section')">צור קשר</a></li>
-      </ul>
-      <div class="language-switcher">
-        <select id="language" onchange="changeLanguage()">
-          <option value="he" selected>עברית</option>
-          <option value="ru">Русский</option>
-          <option value="bg">Български</option>
-        </select>
-      </div>
-    </nav>
-  </header>
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar">
+            <div class="logo" data-lang="logo">בנסקו דום</div>
+            <ul class="nav-links">
+                <li><a href="#" data-lang="home" onclick="openSection(event, 'home-section')">בית</a></li>
+                <li><a href="#" data-lang="apartments" onclick="openSection(event, 'apartments-section')">דירות</a></li>
+                <li><a href="#" data-lang="about" onclick="openSection(event, 'about-section')">על בנסקו</a></li>
+                <li><a href="#" data-lang="contacts" onclick="openSection(event, 'contacts-section')">צור קשר</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="language" onchange="changeLanguage()">
+                    <option value="he" selected>עברית</option>
+                    <option value="ru">Русский</option>
+                    <option value="bg">Български</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-  <section id="home-section" class="section active">
-    <div class="hero">
-      <div class="hero-content">
-        <h1>הבית שלך בלב בנסקו</h1>
-        <p>מצא את הדירה המושלמת בהרים</p>
-        <a href="#" class="cta-button" onclick="openSection(event, 'apartments-section')">מצא את דירת החלומות שלך</a>
-      </div>
-    </div>
-    <div class="apartment-grid">
-      <div class="apartment-card">
-        <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" alt="דירה 1" />
-        <h3>דירת שני חדרים</h3>
-        <p>62.83 מ"ר, מרפסת עם נוף להרים</p>
-        <a href="#" class="card-button">פרטים נוספים</a>
-      </div>
-    </div>
-  </section>
+    <!-- Главная страница -->
+    <section id="home-section" class="section active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 data-lang="hero-title">הבית שלך בלב בנסקו</h1>
+                <p data-lang="hero-subtitle">מצא את הדירה המושלמת בהרים</p>
+                <a href="#" onclick="openSection(event, 'apartments-section')" class="cta-button" data-lang="hero-button">מצא את דירת החלומות שלך</a>
+            </div>
+        </div>
+        <div class="apartment-grid">
+            <div class="apartment-card">
+                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 1">
+                <h3 data-lang="apartment-1-title">דירת שני חדרים</h3>
+                <p data-lang="apartment-1-desc">62.83 מ"ר, מרפסת עם נוף להרים</p>
+                <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
+            </div>
+            <div class="apartment-card">
+                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 2">
+                <h3 data-lang="apartment-2-title">סטודיו נעים</h3>
+                <p data-lang="apartment-2-desc">29.31 מ"ר, מושלם לזוג</p>
+                <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
+            </div>
+            <div class="apartment-card">
+                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 3">
+                <h3 data-lang="apartment-3-title">דירת שני חדרים</h3>
+                <p data-lang="apartment-3-desc">75.16 מ"ר, מרווח ונוח</p>
+                <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="apartments-section" class="section">
-    <h2>ההצעות שלנו</h2>
-    <ul class="apartments-list">
-      <li><span class="hebrew-order">דירת שני חדרים :1-A, מ"ר 62.83, זמין - <span class="ltr">56 547 €</span></span></li>
-      <li><span class="hebrew-order">דירת שני חדרים :2-A, מ"ר 49.71, זמין - <span class="ltr">44 739 €</span></span></li>
-    </ul>
-  </section>
+    <!-- Раздел "דירות" -->
+    <section id="apartments-section" class="section">
+        <h2 data-lang="apartments-title">ההצעות שלנו</h2>
+        <img src="bansko-house.jpg" alt="Фото дома в Банско" class="house-photo">
+        <div class="floor-tabs">
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'basement-tab')" data-lang="basement-tab">מרתף</button>
+            <button class="floor-tab-button active" onclick="openFloorTab(event, 'first-floor-tab')" data-lang="first-floor-tab">קומה ראשונה</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'second-floor-tab')" data-lang="second-floor-tab">קומה שנייה</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'third-floor-tab')" data-lang="third-floor-tab">קומה שלישית</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'fourth-floor-tab')" data-lang="fourth-floor-tab">קומה רביעית</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'attic-tab')" data-lang="attic-tab">קומת גג</button>
+        </div>
 
-  <section id="about-section" class="section">
-    <h2>על בנסקו</h2>
-    <p>עיירת נופש למרגלות הרי פירין</p>
-  </section>
+        <!-- מרתף -->
+        <div id="basement-tab" class="floor-tab-content">
+            <img src="basement.jpg" alt="План подвала">
+            <p data-lang="basement-note">אזור לא למגורים - חניונים (P1–P19)</p>
+            <p data-lang="basement-parking-info"><span class="hebrew-order">9 חניונים נמכרו, 9 חניונים זמינים, מחיר חניון אחד <span class="ltr">15 000 €</span></span></p>
+        </div>
 
-  <section id="contacts-section" class="section">
-    <h2>צור קשר</h2>
-    <p>דוא"ל: almax20011@gmail.com</p>
-    <p>סרגיי: <span class="ltr">+972506459648</span></p>
-    <p>מקסים: <span class="ltr">+359885512519</span></p>
-  </section>
+        <!-- קומה ראשונה -->
+        <div id="first-floor-tab" class="floor-tab-content active">
+            <img src="first-floor.jpg" alt="План первого этажа">
+            <ul class="apartments-list">
+                <li data-lang="first-floor-1-a"><span class="hebrew-order">זמין - <span class="ltr">56 547 €</span> ,מ"ר 62.83 ,דירת שני חדרים :1-A</span></li>
+                <li data-lang="first-floor-2-a"><span class="hebrew-order">זמין - <span class="ltr">44 739 €</span> ,מ"ר 49.71 ,דירת שני חדרים :2-A</span></li>
+                <li data-lang="first-floor-3-a"><span class="hebrew-order">זמין - <span class="ltr">68 805 €</span> ,מ"ר 76.45 ,דירת שני חדרים :3-A</span></li>
+                <li data-lang="first-floor-1-b"><span class="hebrew-order">זמין - <span class="ltr">53 406 €</span> ,מ"ר 62.83 ,דירת שני חדרים :1-Б</span></li>
+                <li data-lang="first-floor-2-b" class="sold"><span class="hebrew-order">נמכר ,מ"ר 49.71 ,דירת שני חדרים :2-Б</span></li>
+                <li data-lang="first-floor-3-b"><span class="hebrew-order">זמין - <span class="ltr">64 983 €</span> ,מ"ר 76.45 ,דירת שני חדרים :3-Б</span></li>
+            </ul>
+        </div>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">בנסקו דום</div>
-      <p>© 2025 כל הזכויות שמורות</p>
-    </div>
-  </footer>
+        <!-- קומה שנייה -->
+        <div id="second-floor-tab" class="floor-tab-content">
+            <img src="second-floor.jpg" alt="План второго этажа">
+            <ul class="apartments-list">
+                <li data-lang="second-floor-4-a"><span class="hebrew-order">זמין - <span class="ltr">61 056 €</span> ,מ"ר 67.84 ,דירת שני חדרים :4-A</span></li>
+                <li data-lang="second-floor-5-a"><span class="hebrew-order">זמין - <span class="ltr">58 014 €</span> ,מ"ר 64.46 ,דירת שני חדרים :5-A</span></li>
+                <li data-lang="second-floor-6-a"><span class="hebrew-order">זמין - <span class="ltr">56 367 €</span> ,מ"ר 62.63 ,דירת שני חדרים :6-A</span></li>
+                <li data-lang="second-floor-7-a"><span class="hebrew-order">זמין - <span class="ltr">26 379 €</span> ,מ"ר 29.31 ,סטודיו :7-A</span></li>
+                <li data-lang="second-floor-4-b"><span class="hebrew-order">זמין - <span class="ltr">57 664 €</span> ,מ"ר 67.84 ,דירת שני חדרים :4-Б</span></li>
+                <li data-lang="second-floor-5-b" class="sold"><span class="hebrew-order">נמכר ,מ"ר 64.46 ,דירת שני חדרים :5-Б</span></li>
+                <li data-lang="second-floor-6-b"><span class="hebrew-order">זמין - <span class="ltr">53 236 €</span> ,מ"ר 62.63 ,דירת שני חדרים :6-Б</span></li>
+                <li data-lang="second-floor-7-b"><span class="hebrew-order">זמין - <span class="ltr">24 914 €</span> ,מ"ר 29.31 ,סטודיו :7-Б</span></li>
+            </ul>
+        </div>
 
-  <script>
-    function openSection(event, id) {
-      event.preventDefault();
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+        <!-- קומה שלישית -->
+        <div id="third-floor-tab" class="floor-tab-content">
+            <img src="third-floor.jpg" alt="План третьего этажа">
+            <ul class="apartments-list">
+                <li data-lang="third-floor-8-a"><span class="hebrew-order">זמין - <span class="ltr">61 056 €</span> ,מ"ר 67.84 ,דירת שני חדרים :8-A</span></li>
+                <li data-lang="third-floor-9-a"><span class="hebrew-order">זמין - <span class="ltr">58 014 €</span> ,מ"ר 64.46 ,דירת שני חדרים :9-A</span></li>
+                <li data-lang="third-floor-10-a"><span class="hebrew-order">זמין - <span class="ltr">56 367 €</span> ,מ"ר 62.63 ,דירת שני חדרים :10-A</span></li>
+                <li data-lang="third-floor-11-a" class="sold"><span class="hebrew-order">נמכר ,מ"ר 29.31 ,סטודיו :11-A</span></li>
+                <li data-lang="third-floor-8-b"><span class="hebrew-order">זמין - <span class="ltr">61 056 €</span> ,מ"ר 67.84 ,דירת שני חדרים :8-Б</span></li>
+                <li data-lang="third-floor-9-b"><span class="hebrew-order">זמין - <span class="ltr">58 014 €</span> ,מ"ר 64.46 ,דירת שני חדרים :9-Б</span></li>
+                <li data-lang="third-floor-10-b"><span class="hebrew-order">זמין - <span class="ltr">56 367 €</span> ,מ"ר 62.63 ,דירת שני חדרים :10-Б</span></li>
+                <li data-lang="third-floor-11-b"><span class="hebrew-order">זמין - <span class="ltr">26 379 €</span> ,מ"ר 29.31 ,סטודיו :11-Б</span></li>
+            </ul>
+        </div>
+
+        <!-- קומה רביעית -->
+        <div id="fourth-floor-tab" class="floor-tab-content">
+            <img src="fourth-floor.jpg" alt="План четвертого этажа">
+            <ul class="apartments-list">
+                <li data-lang="fourth-floor-12-a"><span class="hebrew-order">זמין - <span class="ltr">67 644 €</span> ,מ"ר 75.16 ,דירת שלושה חדרים :12-A</span></li>
+                <li data-lang="fourth-floor-13-a"><span class="hebrew-order">זמין - <span class="ltr">60 651 €</span> ,מ"ר 67.39 ,דירת שלושה חדרים :13-A</span></li>
+                <li data-lang="fourth-floor-14-a" class="sold"><span class="hebrew-order">נמכר ,מ"ר 48.28 ,סטודיו :14-A</span></li>
+                <li data-lang="fourth-floor-15-a"><span class="hebrew-order">זמין - <span class="ltr">47 745 €</span> ,מ"ר 53.05 ,סטודיו :15-A</span></li>
+                <li data-lang="fourth-floor-12-b" class="sold"><span class="hebrew-order">נמכר ,מ"ר 75.16 ,דירת שלושה חדרים :12-Б</span></li>
+                <li data-lang="fourth-floor-13-b"><span class="hebrew-order">זמין - <span class="ltr">מחיר לפי בקשה</span> ,מ"ר 67.39 ,דירת שלושה חדרים :13-Б</span></li>
+                <li data-lang="fourth-floor-14-b" class="sold"><span class="hebrew-order">נמכר ,מ"ר 48.28 ,סטודיו :14-Б</span></li>
+                <li data-lang="fourth-floor-15-b"><span class="hebrew-order">זמין - <span class="ltr">45 093 €</span> ,מ"ר 53.05 ,סטודיו :15-Б</span></li>
+            </ul>
+        </div>
+
+        <!-- קומת גג -->
+        <div id="attic-tab" class="floor-tab-content">
+            <img src="fifth-floor.jpg" alt="План мансардного этажа">
+            <ul class="apartments-list">
+                <li data-lang="attic-16-a" class="sold"><span class="hebrew-order">נמכר ,מ"ר 22.03 ,סטודיו :16-A</span></li>
+                <li data-lang="attic-17-a" class="sold"><span class="hebrew-order">נמכר ,מ"ר 53.85 ,דירת שני חדרים :17-A</span></li>
+                <li data-lang="attic-18-a" class="sold"><span class="hebrew-order">נמכר ,מ"ר 42.12 ,דירת שני חדרים :18-A</span></li>
+                <li data-lang="attic-16-b" class="sold"><span class="hebrew-order">נמכר ,מ"ר 22.03 ,סטודיו :16-Б</span></li>
+                <li data-lang="attic-17-b"><span class="hebrew-order">זמין - <span class="ltr">45 773 €</span> ,מ"ר 53.85 ,דירת שני חדרים :17-Б</span></li>
+                <li data-lang="attic-18-b"><span class="hebrew-order">זמין - <span class="ltr">35 802 €</span> ,מ"ר 42.12 ,דירת שני חדרים :18-Б</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Раздел "על בנסקו" -->
+    <section id="about-section" class="section">
+        <h2 data-lang="about-title">על בנסקו</h2>
+        <p data-lang="about-description">בנסקו היא עיירה יפהפייה בדרום-מערב בולגריה, הידועה בזכות אתר הסקי שלה ובארכיטקטורה המסורתית. ממוקמת למרגלות הרי פירין, היא מציעה נופים עוצרי נשימה ופעילויות חוץ כל השנה.</p>
+        <img src="https://via.placeholder.com/800x400?text=Photo+of+Bansko+House" alt="Фото дома в Банско">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11893.896579893757!2d23.4844579!3d41.8313546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aa8f8f6f6f6f6f%3A0x40000d6f6f6f6f6f!2sBansko!5e0!3m2!1sen!2sbg!4v1633021234567!5m2!1sen!2sbg" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Раздел "צור קשר" -->
+    <section id="contacts-section" class="section">
+        <h2 data-lang="contacts-title">צור קשר</h2>
+        <p data-lang="contacts-description">לפרטים נוספים, אנא צור קשר איתנו בטלפון או בדוא"ל.</p>
+        <p>דוא"ל: almax20011@gmail.com</p>
+        <p>סרגיי: <span class="ltr">+972506459648</span></p>
+        <p>מקסים: <span class="ltr">+359 88 551 25 19</span></p>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" data-lang="logo">בנסקו דום</div>
+            <p data-lang="footer-copyright">© 2025 כל הזכויות שמורות</p>
+            <div class="social-links">
+                <a href="#" data-lang="telegram">Telegram</a>
+                <a href="#" data-lang="instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
