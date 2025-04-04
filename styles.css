@@ -200,11 +200,6 @@ h1, h2, h3 {
     color: #666;
 }
 
-.text-block {
-    display: inline-block;
-    unicode-bidi: isolate;
-}
-
 /* Карточки квартир */
 .apartment-grid {
     display: grid;
