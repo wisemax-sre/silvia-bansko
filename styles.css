@@ -291,3 +291,19 @@ footer {
 .social-links a:hover {
     color: #D4A017;
 }
+.hebrew-order {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.hebrew-order .ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+}
+
+.apartments-list li {
+    direction: rtl;
+    unicode-bidi: embed;
+    text-align: right;
+}
