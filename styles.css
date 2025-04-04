@@ -307,3 +307,14 @@ footer {
     unicode-bidi: embed;
     text-align: right;
 }
+.apartments-list li {
+    direction: rtl;
+    unicode-bidi: isolate-override; /* принудительно исправит направление текста */
+    text-align: right;
+}
+
+.apartments-list li .ltr {
+    direction: ltr !important;
+    unicode-bidi: isolate-override !important; /* явный приоритет направления LTR */
+    display: inline-block !important;
+}
