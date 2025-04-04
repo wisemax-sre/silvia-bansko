@@ -150,10 +150,7 @@ h1, h2, h3 {
     transition: background 0.3s;
 }
 
-.floor-tab-button:hover {
-    background: #D4A017;
-}
-
+.floor-tab-button:hover,
 .floor-tab-button.active {
     background: #D4A017;
 }
@@ -254,7 +251,14 @@ h1, h2, h3 {
 }
 
 /* Номера телефонов и цены */
+.hebrew-order {
+    unicode-bidi: embed;
+    direction: rtl;
+    display: inline-block;
+}
+
 .ltr {
+    unicode-bidi: embed;
     direction: ltr;
     display: inline-block;
 }
