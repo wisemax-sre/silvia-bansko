@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Банско Дом</title>
+    <title>דירות בבנסקו</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -11,17 +11,17 @@
     <!-- Шапка -->
     <header>
         <nav class="navbar">
-            <div class="logo" data-lang="logo">Банско Дом</div>
+            <div class="logo" data-lang="logo">בנסקו דום</div>
             <ul class="nav-links">
-                <li><a href="#" data-lang="home" onclick="openSection(event, 'home-section')">Главная</a></li>
-                <li><a href="#" data-lang="apartments" onclick="openSection(event, 'apartments-section')">Квартиры</a></li>
-                <li><a href="#" data-lang="about" onclick="openSection(event, 'about-section')">О Банско</a></li>
-                <li><a href="#" data-lang="contacts" onclick="openSection(event, 'contacts-section')">Контакты</a></li>
+                <li><a href="#" data-lang="home" onclick="openSection(event, 'home-section')">בית</a></li>
+                <li><a href="#" data-lang="apartments" onclick="openSection(event, 'apartments-section')">דירות</a></li>
+                <li><a href="#" data-lang="about" onclick="openSection(event, 'about-section')">על בנסקו</a></li>
+                <li><a href="#" data-lang="contacts" onclick="openSection(event, 'contacts-section')">צור קשר</a></li>
             </ul>
             <div class="language-switcher">
                 <select id="language" onchange="changeLanguage()">
+                    <option value="he" selected>עברית</option>
                     <option value="ru">Русский</option>
-                    <option value="he">עברית</option>
                     <option value="bg">Български</option>
                 </select>
             </div>
@@ -32,62 +32,62 @@
     <section id="home-section" class="section active">
         <div class="hero">
             <div class="hero-content">
-                <h1 data-lang="hero-title">Ваш дом в сердце Банско</h1>
-                <p data-lang="hero-subtitle">Найдите идеальную квартиру в горах</p>
-                <a href="#" class="cta-button" data-lang="hero-button">Найти квартиру мечты</a>
+                <h1 data-lang="hero-title">הבית שלך בלב בנסקו</h1>
+                <p data-lang="hero-subtitle">מצא את הדירה המושלמת בהרים</p>
+                <a href="#apartments-section" class="cta-button" data-lang="hero-button">מצא את דירת החלומות שלך</a>
             </div>
         </div>
         <div class="apartment-grid">
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Квартира 1">
-                <h3 data-lang="apartment-1-title">Двухкомнатная квартира</h3>
-                <p data-lang="apartment-1-desc">62.83 м², балкон с видом на горы</p>
-                <a href="#" class="card-button" data-lang="details">Подробнее</a>
+                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 1">
+                <h3 data-lang="apartment-1-title">דירה דו-חדרית</h3>
+                <p data-lang="apartment-1-desc">62.83 מ"ר, מרפסת עם נוף להרים</p>
+                <a href="#" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Квартира 2">
-                <h3 data-lang="apartment-2-title">Уютная студия</h3>
-                <p data-lang="apartment-2-desc">29.31 м², идеально для пары</p>
-                <a href="#" class="card-button" data-lang="details">Подробнее</a>
+                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 2">
+                <h3 data-lang="apartment-2-title">סטודיו נעים</h3>
+                <p data-lang="apartment-2-desc">29.31 מ"ר, מושלם לזוג</p>
+                <a href="#" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
-                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Квартира 3">
-                <h3 data-lang="apartment-3-title">Семейный дуплекс</h3>
-                <p data-lang="apartment-3-desc">75.16 м², просторный и удобный</p>
-                <a href="#" class="card-button" data-lang="details">Подробнее</a>
+                <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 3">
+                <h3 data-lang="apartment-3-title">דופלקס משפחתי</h3>
+                <p data-lang="apartment-3-desc">75.16 מ"ר, מרווח ונוח</p>
+                <a href="#" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
         </div>
     </section>
 
     <!-- Раздел "Квартиры" -->
     <section id="apartments-section" class="section">
-        <h2 data-lang="apartments-title">Наши предложения</h2>
+        <h2 data-lang="apartments-title">ההצעות שלנו</h2>
         <img src="bansko-house.jpg" alt="Фото дома в Банско" class="house-photo">
         <div class="floor-tabs">
-            <button class="floor-tab-button active" onclick="openFloorTab(event, 'basement-tab')" data-lang="basement-tab">Подвал</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'first-floor-tab')" data-lang="first-floor-tab">Первый этаж</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'second-floor-tab')" data-lang="second-floor-tab">Второй этаж</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'third-floor-tab')" data-lang="third-floor-tab">Третий этаж</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'fourth-floor-tab')" data-lang="fourth-floor-tab">Четвертый этаж</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'attic-tab')" data-lang="attic-tab">Мансардный этаж</button>
+            <button class="floor-tab-button active" onclick="openFloorTab(event, 'basement-tab')" data-lang="basement-tab">סוטרן</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'first-floor-tab')" data-lang="first-floor-tab">קומה ראשונה</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'second-floor-tab')" data-lang="second-floor-tab">קומה שנייה</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'third-floor-tab')" data-lang="third-floor-tab">קומה שלישית</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'fourth-floor-tab')" data-lang="fourth-floor-tab">קומה רביעית</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'attic-tab')" data-lang="attic-tab">קומת גג</button>
         </div>
 
         <!-- Подвал -->
         <div id="basement-tab" class="floor-tab-content active">
             <img src="basement.jpg" alt="План подвала">
-            <p data-lang="basement-note">Нежилая зона - парковки (P1–P19)</p>
+            <p data-lang="basement-note">אזור לא למגורים - חניונים (P1–P19)</p>
         </div>
 
         <!-- Первый этаж -->
         <div id="first-floor-tab" class="floor-tab-content">
             <img src="first-floor.jpg" alt="План первого этажа">
             <ul class="apartments-list">
-                <li data-lang="first-floor-1-a">1-A: Двухкомнатная, 62.83 м², 56,547 € - Доступна</li>
-                <li data-lang="first-floor-2-a">2-A: Двухкомнатная, 49.71 м², 44,739 € - Доступна</li>
-                <li data-lang="first-floor-3-a">3-A: Двухкомнатная, 76.45 м², 68,805 € - Доступна</li>
-                <li data-lang="first-floor-1-b">1-Б: Двухкомнатная, 62.83 м², 53,406 € - Доступна</li>
-                <li data-lang="first-floor-2-b" class="sold">2-Б: Двухкомнатная, 49.71 м², 53,406 € - Продана</li>
-                <li data-lang="first-floor-3-b">3-Б: Двухкомнатная, 76.45 м², 64,983 € - Доступна</li>
+                <li data-lang="first-floor-1-a">1-A: דו-חדרי, 62.83 מ"ר, 56 547 € - זמין</li>
+                <li data-lang="first-floor-2-a">2-A: דו-חדרי, 49.71 מ"ר, 44 739 € - זמין</li>
+                <li data-lang="first-floor-3-a">3-A: דו-חדרי, 76.45 מ"ר, 68 805 € - זמין</li>
+                <li data-lang="first-floor-1-b">1-Б: דו-חדרי, 62.83 מ"ר, 53 406 € - זמין</li>
+                <li data-lang="first-floor-2-b" class="sold">2-Б: דו-חדרי, 49.71 מ"ר - נמכר</li>
+                <li data-lang="first-floor-3-b">3-Б: דו-חדרי, 76.45 מ"ר, 64 983 € - זמין</li>
             </ul>
         </div>
 
@@ -95,14 +95,14 @@
         <div id="second-floor-tab" class="floor-tab-content">
             <img src="second-floor.jpg" alt="План второго этажа">
             <ul class="apartments-list">
-                <li data-lang="second-floor-4-a">4-A: Двухкомнатная, 67.84 м², 61,056 € - Доступна</li>
-                <li data-lang="second-floor-5-a">5-A: Двухкомнатная, 64.46 м², 58,014 € - Доступна</li>
-                <li data-lang="second-floor-6-a">6-A: Двухкомнатная, 62.63 м², 56,367 € - Доступна</li>
-                <li data-lang="second-floor-7-a">7-A: Студия, 29.31 м², 26,379 € - Доступна</li>
-                <li data-lang="second-floor-4-b">4-Б: Двухкомнатная, 67.84 м², 57,664 € - Доступна</li>
-                <li data-lang="second-floor-5-b" class="sold">5-Б: Двухкомнатная, 64.46 м², Цена по запросу - Продана</li>
-                <li data-lang="second-floor-6-b">6-Б: Двухкомнатная, 62.63 м², 53,236 € - Доступна</li>
-                <li data-lang="second-floor-7-b">7-Б: Студия, 29.31 м², 24,914 € - Доступна</li>
+                <li data-lang="second-floor-4-a">4-A: דו-חדרי, 67.84 מ"ר, 61 056 € - זמין</li>
+                <li data-lang="second-floor-5-a">5-A: דו-חדרי, 64.46 מ"ר, 58 014 € - זמין</li>
+                <li data-lang="second-floor-6-a">6-A: דו-חדרי, 62.63 מ"ר, 56 367 € - זמין</li>
+                <li data-lang="second-floor-7-a">7-A: סטודיו, 29.31 מ"ר, 26 379 € - זמין</li>
+                <li data-lang="second-floor-4-b">4-Б: דו-חדרי, 67.84 מ"ר, 57 664 € - זמין</li>
+                <li data-lang="second-floor-5-b" class="sold">5-Б: דו-חדרי, 64.46 מ"ר - נמכר</li>
+                <li data-lang="second-floor-6-b">6-Б: דו-חדרי, 62.63 מ"ר, 53 236 € - זמין</li>
+                <li data-lang="second-floor-7-b">7-Б: סטודיו, 29.31 מ"ר, 24 914 € - זמין</li>
             </ul>
         </div>
 
@@ -110,14 +110,14 @@
         <div id="third-floor-tab" class="floor-tab-content">
             <img src="third-floor.jpg" alt="План третьего этажа">
             <ul class="apartments-list">
-                <li data-lang="third-floor-8-a" class="sold">8-A: Двухкомнатная, 67.84 м², 61,056 € - Продана</li>
-                <li data-lang="third-floor-9-a" class="sold">9-A: Двухкомнатная, 64.46 м², 58,014 € - Продана</li>
-                <li data-lang="third-floor-10-a">10-A: Двухкомнатная, 62.63 м², 56,367 € - Доступна</li>
-                <li data-lang="third-floor-11-a">11-A: Студия, 29.31 м², 26,379 € - Доступна</li>
-                <li data-lang="third-floor-8-b">8-Б: Двухкомнатная, 67.84 м², Цена по запросу - Доступна</li>
-                <li data-lang="third-floor-9-b">9-Б: Двухкомнатная, 64.46 м², Цена по запросу - Доступна</li>
-                <li data-lang="third-floor-10-b">10-Б: Двухкомнатная, 62.63 м², Цена по запросу - Доступна</li>
-                <li data-lang="third-floor-11-b">11-Б: Студия, 29.31 м², Цена по запросу - Доступна</li>
+                <li data-lang="third-floor-8-a" class="sold">8-A: דו-חדרי, 67.84 מ"ר - נמכר</li>
+                <li data-lang="third-floor-9-a" class="sold">9-A: דו-חדרי, 64.46 מ"ר - נמכר</li>
+                <li data-lang="third-floor-10-a">10-A: דו-חדרי, 62.63 מ"ר, 56 367 € - זמין</li>
+                <li data-lang="third-floor-11-a">11-A: סטודיו, 29.31 מ"ר, 26 379 € - זמין</li>
+                <li data-lang="third-floor-8-b">8-Б: דו-חדרי, 67.84 מ"ר, מחיר לפי בקשה - זמין</li>
+                <li data-lang="third-floor-9-b">9-Б: דו-חדרי, 64.46 מ"ר, מחיר לפי בקשה - זמין</li>
+                <li data-lang="third-floor-10-b">10-Б: דו-חדרי, 62.63 מ"ר, מחיר לפי בקשה - זמין</li>
+                <li data-lang="third-floor-11-b">11-Б: סטודיו, 29.31 מ"ר, מחיר לפי בקשה - זמין</li>
             </ul>
         </div>
 
@@ -125,14 +125,14 @@
         <div id="fourth-floor-tab" class="floor-tab-content">
             <img src="fourth-floor.jpg" alt="План четвертого этажа">
             <ul class="apartments-list">
-                <li data-lang="fourth-floor-12-a">12-A: Трехкомнатный дуплекс, 75.16 м², 67,644 € - Доступна</li>
-                <li data-lang="fourth-floor-13-a" class="sold">13-A: Трехкомнатный дуплекс, 67.39 м², 60,651 € - Продана</li>
-                <li data-lang="fourth-floor-14-a">14-A: Студия, 48.28 м², 43,452 € - Доступна</li>
-                <li data-lang="fourth-floor-15-a">15-A: Студия, 53.05 м², 47,745 € - Доступна</li>
-                <li data-lang="fourth-floor-12-b" class="sold">12-Б: Трехкомнатный дуплекс, 75.16 м², Цена по запросу - Продана</li>
-                <li data-lang="fourth-floor-13-b">13-Б: Трехкомнатный дуплекс, 67.39 м², Цена по запросу - Доступна</li>
-                <li data-lang="fourth-floor-14-b" class="sold">14-Б: Студия, 48.28 м², Цена по запросу - Продана</li>
-                <li data-lang="fourth-floor-15-b">15-Б: Студия, 53.05 м², 45,093 € - Доступна</li>
+                <li data-lang="fourth-floor-12-a">12-A: תלת-חדרי דופלקס, 75.16 מ"ר, 67 644 € - זמין</li>
+                <li data-lang="fourth-floor-13-a" class="sold">13-A: תלת-חדרי דופלקס, 67.39 מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-14-a">14-A: סטודיו, 48.28 מ"ר, 43 452 € - זמין</li>
+                <li data-lang="fourth-floor-15-a">15-A: סטודיו, 53.05 מ"ר, 47 745 € - זמין</li>
+                <li data-lang="fourth-floor-12-b" class="sold">12-Б: תלת-חדרי דופלקס, 75.16 מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-13-b">13-Б: תלת-חדרי דופלקס, 67.39 מ"ר, מחיר לפי בקשה - זמין</li>
+                <li data-lang="fourth-floor-14-b" class="sold">14-Б: סטודיו, 48.28 מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-15-b">15-Б: סטודיו, 53.05 מ"ר, 45 093 € - זמין</li>
             </ul>
         </div>
 
@@ -140,38 +140,38 @@
         <div id="attic-tab" class="floor-tab-content">
             <img src="fifth-floor.jpg" alt="План мансардного этажа">
             <ul class="apartments-list">
-                <li data-lang="attic-16-a" class="sold">16-A: Студия, 22.03 м², Цена по запросу - Продана</li>
-                <li data-lang="attic-17-a" class="sold">17-A: Двухкомнатная, 53.85 м², Цена по запросу - Продана</li>
-                <li data-lang="attic-18-a" class="sold">18-A: Двухкомнатная, 42.12 м², 18,726 € - Продана</li>
-                <li data-lang="attic-16-b">16-Б: Студия, 22.03 м², 18,726 € - Доступна</li>
-                <li data-lang="attic-17-b">17-Б: Двухкомнатная, 53.85 м², 45,773 € - Доступна</li>
-                <li data-lang="attic-18-b">18-Б: Двухкомнатная, 42.12 м², 35,802 € - Доступна</li>
+                <li data-lang="attic-16-a" class="sold">16-A: סטודיו, 22.03 מ"ר - נמכר</li>
+                <li data-lang="attic-17-a" class="sold">17-A: דו-חדרי, 53.85 מ"ר - נמכר</li>
+                <li data-lang="attic-18-a" class="sold">18-A: דו-חדרי, 42.12 מ"ר - נמכר</li>
+                <li data-lang="attic-16-b" class="sold">16-Б: סטודיו, 22.03 מ"ר - נמכר</li>
+                <li data-lang="attic-17-b">17-Б: דו-חדרי, 53.85 מ"ר, 45 773 € - זמין</li>
+                <li data-lang="attic-18-b">18-Б: דו-חדרי, 42.12 מ"ר, 35 802 € - זמין</li>
             </ul>
         </div>
     </section>
 
     <!-- Раздел "О Банско" -->
     <section id="about-section" class="section">
-        <h2 data-lang="about-title">О Банско</h2>
-        <p data-lang="about-description">Банско — красивый городок на юго-западе Болгарии, известный своим горнолыжным курортом и традиционной архитектурой. Расположенный у подножия Пиринских гор, он предлагает захватывающие виды и круглогодичные активности на свежем воздухе.</p>
+        <h2 data-lang="about-title">על בנסקו</h2>
+        <p data-lang="about-description">בנסקו היא עיירה יפהפייה בדרום-מערב בולגריה, הידועה בזכות אתר הסקי שלה ובארכיטקטורה המסורתית. ממוקמת למרגלות הרי פירין, היא מציעה נופים עוצרי נשימה ופעילויות חוץ כל השנה.</p>
         <img src="https://via.placeholder.com/800x400?text=Photo+of+Bansko+House" alt="Фото дома в Банско">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11893.896579893757!2d23.4844579!3d41.8313546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aa8f8f6f6f6f6f%3A0x40000d6f6f6f6f6f!2sBansko!5e0!3m2!1sen!2sbg!4v1633021234567!5m2!1sen!2sbg" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Раздел "Контакты" -->
     <section id="contacts-section" class="section">
-        <h2 data-lang="contacts-title">Контакты</h2>
-        <p data-lang="contacts-description">Для получения дополнительной информации, пожалуйста, свяжитесь с нами по телефону или электронной почте.</p>
-        <p>Электронная почта: almax20011@gmail.com</p>
-        <p>Сергей: +972506459648</p>
-        <p>Максим: +359 88 551 25 19</p>
+        <h2 data-lang="contacts-title">צור קשר</h2>
+        <p data-lang="contacts-description">לפרטים נוספים, אנא צור קשר איתנו בטלפון או בדוא"ל.</p>
+        <p>דוא"ל: almax20011@gmail.com</p>
+        <p>סרגיי: +972506459648</p>
+        <p>מקסים: +359 88 551 25 19</p>
     </section>
 
     <!-- Футер -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo" data-lang="logo">Банско Дом</div>
-            <p data-lang="footer-copyright">© 2025 Все права защищены</p>
+            <div class="footer-logo" data-lang="logo">בנסקו דום</div>
+            <p data-lang="footer-copyright">© 2025 כל הזכויות שמורות</p>
             <div class="social-links">
                 <a href="#" data-lang="telegram">Telegram</a>
                 <a href="#" data-lang="instagram">Instagram</a>
