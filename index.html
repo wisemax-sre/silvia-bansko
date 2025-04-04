@@ -34,7 +34,7 @@
             <div class="hero-content">
                 <h1 data-lang="hero-title">הבית שלך בלב בנסקו</h1>
                 <p data-lang="hero-subtitle">מצא את הדירה המושלמת בהרים</p>
-                <a href="#apartments-section" class="cta-button" data-lang="hero-button">מצא את דירת החלומות שלך</a>
+                <a href="#" onclick="openSection(event, 'apartments-section')" class="cta-button" data-lang="hero-button">מצא את דירת החלומות שלך</a>
             </div>
         </div>
         <div class="apartment-grid">
@@ -64,8 +64,8 @@
         <h2 data-lang="apartments-title">ההצעות שלנו</h2>
         <img src="bansko-house.jpg" alt="Фото дома в Банско" class="house-photo">
         <div class="floor-tabs">
-            <button class="floor-tab-button active" onclick="openFloorTab(event, 'basement-tab')" data-lang="basement-tab">סוטרן</button>
-            <button class="floor-tab-button" onclick="openFloorTab(event, 'first-floor-tab')" data-lang="first-floor-tab">קומה ראשונה</button>
+            <button class="floor-tab-button" onclick="openFloorTab(event, 'basement-tab')" data-lang="basement-tab">סוטרן</button>
+            <button class="floor-tab-button active" onclick="openFloorTab(event, 'first-floor-tab')" data-lang="first-floor-tab">קומה ראשונה</button>
             <button class="floor-tab-button" onclick="openFloorTab(event, 'second-floor-tab')" data-lang="second-floor-tab">קומה שנייה</button>
             <button class="floor-tab-button" onclick="openFloorTab(event, 'third-floor-tab')" data-lang="third-floor-tab">קומה שלישית</button>
             <button class="floor-tab-button" onclick="openFloorTab(event, 'fourth-floor-tab')" data-lang="fourth-floor-tab">קומה רביעית</button>
@@ -73,13 +73,14 @@
         </div>
 
         <!-- Подвал -->
-        <div id="basement-tab" class="floor-tab-content active">
+        <div id="basement-tab" class="floor-tab-content">
             <img src="basement.jpg" alt="План подвала">
             <p data-lang="basement-note">אזור לא למגורים - חניונים (P1–P19)</p>
+            <p data-lang="basement-parking-info">9 חניונים נמכרו, 9 חניונים זמינים, מחיר חניון אחד 15 000 €</p>
         </div>
 
         <!-- Первый этаж -->
-        <div id="first-floor-tab" class="floor-tab-content">
+        <div id="first-floor-tab" class="floor-tab-content active">
             <img src="first-floor.jpg" alt="План первого этажа">
             <ul class="apartments-list">
                 <li data-lang="first-floor-1-a">1-A: דו-חדרי, 62.83 מ"ר, 56 547 € - זמין</li>
@@ -96,7 +97,7 @@
             <img src="second-floor.jpg" alt="План второго этажа">
             <ul class="apartments-list">
                 <li data-lang="second-floor-4-a">4-A: דו-חדרי, 67.84 מ"ר, 61 056 € - זמין</li>
-                <li data-lang="second-floor-5-a">5-A: דו-חדרי, 64.46 מ"ר, 58 014 € - זמין</li>
+                <li data-lang="second-floor-5-a">5-A: דו-חדרי, 64.46 מ"ר, 58 014 € - זмין</li>
                 <li data-lang="second-floor-6-a">6-A: דו-חדרי, 62.63 מ"ר, 56 367 € - זמין</li>
                 <li data-lang="second-floor-7-a">7-A: סטודיו, 29.31 מ"ר, 26 379 € - זמין</li>
                 <li data-lang="second-floor-4-b">4-Б: דו-חדרי, 67.84 מ"ר, 57 664 € - זמין</li>
