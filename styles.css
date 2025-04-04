@@ -188,7 +188,6 @@ h1, h2, h3 {
 .apartments-list li {
     padding: 15px;
     border-bottom: 1px solid #ddd;
-    direction: ltr;
     text-align: center;
 }
 
@@ -199,6 +198,11 @@ h1, h2, h3 {
 .apartments-list li.sold {
     background: #d3d3d3;
     color: #666;
+}
+
+.text-block {
+    display: inline-block;
+    unicode-bidi: isolate;
 }
 
 /* Карточки квартир */
