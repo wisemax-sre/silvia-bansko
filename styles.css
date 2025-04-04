@@ -4,6 +4,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F5E8C7;
     color: #1A3C34;
+    direction: rtl;
+    text-align: right;
 }
 
 h1, h2, h3 {
