@@ -318,3 +318,13 @@ footer {
     unicode-bidi: isolate-override !important; /* явный приоритет направления LTR */
     display: inline-block !important;
 }
+.apartments-list li {
+    direction: rtl;
+    unicode-bidi: plaintext;
+}
+
+.ltr {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    display: inline-block;
+}
