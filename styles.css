@@ -70,10 +70,18 @@ h1, h2, h3 {
 }
 
 /* Герой */
-.hero-content {
+.hero {
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #F5E8C7;
-    padding: 100px 20px;
+}
+
+.hero-content {
+    margin-top: -100px;
 }
 
 .hero-content h1 {
