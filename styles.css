@@ -309,4 +309,8 @@ footer {
     margin-left: 0;
     margin-right: 20px; // Меняем отступ для RTL
 }
+.ltr-num {
+    direction: ltr;
+    display: inline-block;
+}
 */
