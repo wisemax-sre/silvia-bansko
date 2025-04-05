@@ -6,6 +6,13 @@
     <title>דירות בבנסקו</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Добавлено для правильного отображения LTR контента */
+        .ltr-num {
+            direction: ltr;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -39,19 +46,19 @@
             <div class="apartment-card">
                 <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 1">
                 <h3 data-lang="apartment-1-title">דירת שני חדרים</h3>
-                <p data-lang="apartment-1-desc">62.83 מ"ר, מרפסת עם נוף להרים</p>
+                <p data-lang="apartment-1-desc"><span class="ltr-num">62.83</span> מ"ר, מרפסת עם נוף להרים</p>
                 <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
                 <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 2">
                 <h3 data-lang="apartment-2-title">סטודיו נעים</h3>
-                <p data-lang="apartment-2-desc">29.31 מ"ר, מושלם לזוג</p>
+                <p data-lang="apartment-2-desc"><span class="ltr-num">29.31</span> מ"ר, מושלם לזוג</p>
                 <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
             <div class="apartment-card">
                 <img src="https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=300" alt="דירה 3">
                 <h3 data-lang="apartment-3-title">דירת שני חדרים</h3>
-                <p data-lang="apartment-3-desc">75.16 מ"ר, מרווח ונוח</p>
+                <p data-lang="apartment-3-desc"><span class="ltr-num">75.16</span> מ"ר, מרווח ונוח</p>
                 <a href="#" onclick="openSection(event, 'apartments-section')" class="card-button" data-lang="details">פרטים נוספים</a>
             </div>
         </div>
@@ -72,72 +79,72 @@
         <div id="basement-tab" class="floor-tab-content">
             <img src="basement.jpg" alt="תוכנית המרתף">
             <p data-lang="basement-note">אזור לא למגורים - חניונים (P1–P19)</p>
-            <p data-lang="basement-parking-info">9 חניונים נמכרו, 9 חניונים זמינים, מחיר חניון אחד <span dir="ltr">€ 15 000</span></p>
+            <p data-lang="basement-parking-info">9 חניונים נמכרו, 9 חניונים זמינים, מחיר חניון אחד <span class="ltr-num">€ 15 000</span></p>
         </div>
 
         <div id="first-floor-tab" class="floor-tab-content active">
             <img src="first-floor.jpg" alt="תוכנית קומה ראשונה">
             <ul class="apartments-list">
-                <li data-lang="first-floor-1-a">1-A: דירת שני חדרים, 62.83 מ"ר, <span dir="ltr">€ 56 547</span> - זמין</li>
-                <li data-lang="first-floor-2-a">2-A: דירת שני חדרים, 49.71 מ"ר, <span dir="ltr">€ 44 739</span> - זמין</li>
-                <li data-lang="first-floor-3-a">3-A: דירת שני חדרים, 76.45 מ"ר, <span dir="ltr">€ 68 805</span> - זמין</li>
-                <li data-lang="first-floor-1-b">1-Б: דירת שני חדרים, 62.83 מ"ר, <span dir="ltr">€ 53 406</span> - זמין</li>
-                <li data-lang="first-floor-2-b" class="sold">2-Б: דירת שני חדרים, 49.71 מ"ר - נמכר</li>
-                <li data-lang="first-floor-3-b">3-Б: דירת שני חדרים, 76.45 מ"ר, <span dir="ltr">€ 64 983</span> - זמין</li>
+                <li data-lang="first-floor-1-a">1-A: דירת שני חדרים, <span class="ltr-num">62.83</span> מ"ר, <span class="ltr-num">€ 56 547</span> - זמין</li>
+                <li data-lang="first-floor-2-a">2-A: דירת שני חדרים, <span class="ltr-num">49.71</span> מ"ר, <span class="ltr-num">€ 44 739</span> - זמין</li>
+                <li data-lang="first-floor-3-a">3-A: דירת שני חדרים, <span class="ltr-num">76.45</span> מ"ר, <span class="ltr-num">€ 68 805</span> - זמין</li>
+                <li data-lang="first-floor-1-b">1-Б: דירת שני חדרים, <span class="ltr-num">62.83</span> מ"ר, <span class="ltr-num">€ 53 406</span> - זמין</li>
+                <li data-lang="first-floor-2-b" class="sold">2-Б: דירת שני חדרים, <span class="ltr-num">49.71</span> מ"ר - נמכר</li>
+                <li data-lang="first-floor-3-b">3-Б: דירת שני חדרים, <span class="ltr-num">76.45</span> מ"ר, <span class="ltr-num">€ 64 983</span> - זמין</li>
             </ul>
         </div>
 
         <div id="second-floor-tab" class="floor-tab-content">
             <img src="second-floor.jpg" alt="תוכנית קומה שנייה">
             <ul class="apartments-list">
-                <li data-lang="second-floor-4-a">4-A: דירת שני חדרים, 67.84 מ"ר, <span dir="ltr">€ 61 056</span> - זמין</li>
-                <li data-lang="second-floor-5-a">5-A: דירת שני חדרים, 64.46 מ"ר, <span dir="ltr">€ 58 014</span> - זמין</li>
-                <li data-lang="second-floor-6-a">6-A: דירת שני חדרים, 62.63 מ"ר, <span dir="ltr">€ 56 367</span> - זמין</li>
-                <li data-lang="second-floor-7-a">7-A: סטודיו, 29.31 מ"ר, <span dir="ltr">€ 26 379</span> - זמין</li>
-                <li data-lang="second-floor-4-b">4-Б: דירת שני חדרים, 67.84 מ"ר, <span dir="ltr">€ 57 664</span> - זמין</li>
-                <li data-lang="second-floor-5-b" class="sold">5-Б: דירת שני חדרים, 64.46 מ"ר - נמכר</li>
-                <li data-lang="second-floor-6-b">6-Б: דירת שני חדרים, 62.63 מ"ר, <span dir="ltr">€ 53 236</span> - זמין</li>
-                <li data-lang="second-floor-7-b">7-Б: סטודיו, 29.31 מ"ר, <span dir="ltr">€ 24 914</span> - זמין</li>
+                <li data-lang="second-floor-4-a">4-A: דירת שני חדרים, <span class="ltr-num">67.84</span> מ"ר, <span class="ltr-num">€ 61 056</span> - זמין</li>
+                <li data-lang="second-floor-5-a">5-A: דירת שני חדרים, <span class="ltr-num">64.46</span> מ"ר, <span class="ltr-num">€ 58 014</span> - זמין</li>
+                <li data-lang="second-floor-6-a">6-A: דירת שני חדרים, <span class="ltr-num">62.63</span> מ"ר, <span class="ltr-num">€ 56 367</span> - זמין</li>
+                <li data-lang="second-floor-7-a">7-A: סטודיו, <span class="ltr-num">29.31</span> מ"ר, <span class="ltr-num">€ 26 379</span> - זמין</li>
+                <li data-lang="second-floor-4-b">4-Б: דירת שני חדרים, <span class="ltr-num">67.84</span> מ"ר, <span class="ltr-num">€ 57 664</span> - זמין</li>
+                <li data-lang="second-floor-5-b" class="sold">5-Б: דירת שני חדרים, <span class="ltr-num">64.46</span> מ"ר - נמכר</li>
+                <li data-lang="second-floor-6-b">6-Б: דירת שני חדרים, <span class="ltr-num">62.63</span> מ"ר, <span class="ltr-num">€ 53 236</span> - זמין</li>
+                <li data-lang="second-floor-7-b">7-Б: סטודיו, <span class="ltr-num">29.31</span> מ"ר, <span class="ltr-num">€ 24 914</span> - זמין</li>
             </ul>
         </div>
 
         <div id="third-floor-tab" class="floor-tab-content">
             <img src="third-floor.jpg" alt="תוכנית קומה שלישית">
             <ul class="apartments-list">
-                <li data-lang="third-floor-8-a">8-A: דירת שני חדרים, 67.84 מ"ר, <span dir="ltr">€ 61 056</span> - זמין</li>
-                <li data-lang="third-floor-9-a">9-A: דירת שני חדרים, 64.46 מ"ר, <span dir="ltr">€ 58 014</span> - זמין</li>
-                <li data-lang="third-floor-10-a">10-A: דירת שני חדרים, 62.63 מ"ר, <span dir="ltr">€ 56 367</span> - זמין</li>
-                <li data-lang="third-floor-11-a" class="sold">11-A: סטודיו, 29.31 מ"ר - נמכר</li>
-                <li data-lang="third-floor-8-b">8-Б: דירת שני חדרים, 67.84 מ"ר, <span dir="ltr">€ 61 056</span> - זמין</li>
-                <li data-lang="third-floor-9-b">9-Б: דירת שני חדרים, 64.46 מ"ר, <span dir="ltr">€ 58 014</span> - זמין</li>
-                <li data-lang="third-floor-10-b">10-Б: דירת שני חדרים, 62.63 מ"ר, <span dir="ltr">€ 56 367</span> - זמין</li>
-                <li data-lang="third-floor-11-b">11-Б: סטודיו, 29.31 מ"ר, <span dir="ltr">€ 26 379</span> - זמין</li>
+                <li data-lang="third-floor-8-a">8-A: דירת שני חדרים, <span class="ltr-num">67.84</span> מ"ר, <span class="ltr-num">€ 61 056</span> - זמין</li>
+                <li data-lang="third-floor-9-a">9-A: דירת שני חדרים, <span class="ltr-num">64.46</span> מ"ר, <span class="ltr-num">€ 58 014</span> - זמין</li>
+                <li data-lang="third-floor-10-a">10-A: דירת שני חדרים, <span class="ltr-num">62.63</span> מ"ר, <span class="ltr-num">€ 56 367</span> - זמין</li>
+                <li data-lang="third-floor-11-a" class="sold">11-A: סטודיו, <span class="ltr-num">29.31</span> מ"ר - נמכר</li>
+                <li data-lang="third-floor-8-b">8-Б: דירת שני חדרים, <span class="ltr-num">67.84</span> מ"ר, <span class="ltr-num">€ 61 056</span> - זמין</li>
+                <li data-lang="third-floor-9-b">9-Б: דירת שני חדרים, <span class="ltr-num">64.46</span> מ"ר, <span class="ltr-num">€ 58 014</span> - זמין</li>
+                <li data-lang="third-floor-10-b">10-Б: דירת שני חדרים, <span class="ltr-num">62.63</span> מ"ר, <span class="ltr-num">€ 56 367</span> - זמין</li>
+                <li data-lang="third-floor-11-b">11-Б: סטודיו, <span class="ltr-num">29.31</span> מ"ר, <span class="ltr-num">€ 26 379</span> - זמין</li>
             </ul>
         </div>
 
         <div id="fourth-floor-tab" class="floor-tab-content">
             <img src="fourth-floor.jpg" alt="תוכנית קומה רביעית">
             <ul class="apartments-list">
-                <li data-lang="fourth-floor-12-a">12-A: דירת שלושה חדרים, 75.16 מ"ר, <span dir="ltr">€ 67 644</span> - זמין</li>
-                <li data-lang="fourth-floor-13-a">13-A: דירת שלושה חדרים, 67.39 מ"ר, <span dir="ltr">€ 60 651</span> - זמין</li>
-                <li data-lang="fourth-floor-14-a" class="sold">14-A: סטודיו, 48.28 מ"ר - נמכר</li>
-                <li data-lang="fourth-floor-15-a">15-A: סטודיו, 53.05 מ"ר, <span dir="ltr">€ 47 745</span> - זמין</li>
-                <li data-lang="fourth-floor-12-b" class="sold">12-Б: דירת שלושה חדרים, 75.16 מ"ר - נמכר</li>
-                <li data-lang="fourth-floor-13-b">13-Б: דירת שלושה חדרים, 67.39 מ"ר, <span dir="ltr">מחיר לפי בקשה</span> - זמין</li>
-                <li data-lang="fourth-floor-14-b" class="sold">14-Б: סטודיו, 48.28 מ"ר - נמכר</li>
-                <li data-lang="fourth-floor-15-b">15-Б: סטודיו, 53.05 מ"ר, <span dir="ltr">€ 45 093</span> - זמין</li>
+                <li data-lang="fourth-floor-12-a">12-A: דירת שלושה חדרים, <span class="ltr-num">75.16</span> מ"ר, <span class="ltr-num">€ 67 644</span> - זמין</li>
+                <li data-lang="fourth-floor-13-a">13-A: דירת שלושה חדרים, <span class="ltr-num">67.39</span> מ"ר, <span class="ltr-num">€ 60 651</span> - זמין</li>
+                <li data-lang="fourth-floor-14-a" class="sold">14-A: סטודיו, <span class="ltr-num">48.28</span> מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-15-a">15-A: סטודיו, <span class="ltr-num">53.05</span> מ"ר, <span class="ltr-num">€ 47 745</span> - זמין</li>
+                <li data-lang="fourth-floor-12-b" class="sold">12-Б: דירת שלושה חדרים, <span class="ltr-num">75.16</span> מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-13-b">13-Б: דירת שלושה חדרים, <span class="ltr-num">67.39</span> מ"ר, <span class="ltr-num">מחיר לפי בקשה</span> - זמין</li>
+                <li data-lang="fourth-floor-14-b" class="sold">14-Б: סטודיו, <span class="ltr-num">48.28</span> מ"ר - נמכר</li>
+                <li data-lang="fourth-floor-15-b">15-Б: סטודיו, <span class="ltr-num">53.05</span> מ"ר, <span class="ltr-num">€ 45 093</span> - זמין</li>
             </ul>
         </div>
 
         <div id="attic-tab" class="floor-tab-content">
             <img src="fifth-floor.jpg" alt="תוכנית קומת גג">
             <ul class="apartments-list">
-                <li data-lang="attic-16-a" class="sold">16-A: סטודיו, 22.03 מ"ר - נמכר</li>
-                <li data-lang="attic-17-a" class="sold">17-A: דירת שני חדרים, 53.85 מ"ר - נמכר</li>
-                <li data-lang="attic-18-a" class="sold">18-A: דירת שני חדרים, 42.12 מ"ר - נמכר</li>
-                <li data-lang="attic-16-b" class="sold">16-Б: סטודיו, 22.03 מ"ר - נמכר</li>
-                <li data-lang="attic-17-b">17-Б: דירת שני חדרים, 53.85 מ"ר, <span dir="ltr">€ 45 773</span> - זמין</li>
-                <li data-lang="attic-18-b">18-Б: דירת שני חדרים, 42.12 מ"ר, <span dir="ltr">€ 35 802</span> - זמין</li>
+                <li data-lang="attic-16-a" class="sold">16-A: סטודיו, <span class="ltr-num">22.03</span> מ"ר - נמכר</li>
+                <li data-lang="attic-17-a" class="sold">17-A: דירת שני חדרים, <span class="ltr-num">53.85</span> מ"ר - נמכר</li>
+                <li data-lang="attic-18-a" class="sold">18-A: דירת שני חדרים, <span class="ltr-num">42.12</span> מ"ר - נמכר</li>
+                <li data-lang="attic-16-b" class="sold">16-Б: סטודיו, <span class="ltr-num">22.03</span> מ"ר - נמכר</li>
+                <li data-lang="attic-17-b">17-Б: דירת שני חדרים, <span class="ltr-num">53.85</span> מ"ר, <span class="ltr-num">€ 45 773</span> - זמין</li>
+                <li data-lang="attic-18-b">18-Б: דירת שני חדרים, <span class="ltr-num">42.12</span> מ"ר, <span class="ltr-num">€ 35 802</span> - זמין</li>
             </ul>
         </div>
     </section>
@@ -153,8 +160,8 @@
         <h2 data-lang="contacts-title">צור קשר</h2>
         <p data-lang="contacts-description">לפרטים נוספים, אנא צור קשר איתנו בטלפון או בדוא"ל.</p>
         <p>דוא"ל: almax20011@gmail.com</p>
-        <p>סרגיי: <span dir="ltr">+972506459648</span></p>
-        <p>מקסים: <span dir="ltr">+359 88 551 25 19</span></p>
+        <p>סרגיי: <span class="ltr-num">+972506459648</span></p>
+        <p>מקסים: <span class="ltr-num">+359 88 551 25 19</span></p>
     </section>
 
     <footer>
