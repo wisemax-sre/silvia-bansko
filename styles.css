@@ -3,9 +3,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F5E8C7;
     color: #1A3C34;
-    /* Направление и выравнивание текста теперь устанавливаются в JS
-       в зависимости от языка (через dir='rtl'/'ltr' на <html>),
-       так что эти правила здесь не строго обязательны, но не мешают */
     direction: rtl;
     text-align: right;
 }
@@ -14,7 +11,10 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-/* --- БЛОК .ltr УДАЛЕН ОТСЮДА --- */
+.ltr-num {
+    direction: ltr;
+    display: inline-block;
+}
 
 /* Шапка */
 .navbar {
@@ -42,8 +42,7 @@ h1, h2, h3 {
 }
 
 .nav-links li {
-    margin-left: 30px; /* Для RTL лучше использовать margin-right, если элементы идут справа налево */
-    /* Если порядок ссылок в HTML правильный для RTL, можно оставить margin-left */
+    margin-left: 30px;
 }
 
 .nav-links a {
@@ -57,10 +56,8 @@ h1, h2, h3 {
     color: #D4A017;
 }
 
-/* Переключатель языков */
 .language-switcher {
-    margin-left: 20px; /* Для RTL лучше использовать margin-right */
-    /* Возможно, потребуется: margin-right: 20px; margin-left: 0; */
+    margin-left: 20px;
 }
 
 .language-switcher select {
@@ -95,7 +92,7 @@ h1, h2, h3 {
 .hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #000; /* Черный цвет для подзаголовка может плохо читаться на фото */
+    color: #000;
 }
 
 .cta-button {
@@ -118,7 +115,7 @@ h1, h2, h3 {
 .section {
     display: none;
     padding: 60px 20px;
-    text-align: center; /* Остается для выравнивания заголовков секций */
+    text-align: center;
 }
 
 .section.active {
@@ -166,7 +163,7 @@ h1, h2, h3 {
 
 .floor-tab-content {
     display: none;
-    text-align: center; /* Выравнивание по центру для картинок и описания */
+    text-align: center;
 }
 
 .floor-tab-content.active {
@@ -194,8 +191,6 @@ h1, h2, h3 {
 .apartments-list li {
     padding: 15px;
     border-bottom: 1px solid #ddd;
-    /* text-align: center; Убрал центр, т.к. у нас dir=rtl на <html>, текст выровняется по правому краю */
-    /* --- СТРОКА direction: ltr; УДАЛЕНА ОТСЮДА --- */
 }
 
 .apartments-list li:last-child {
@@ -223,7 +218,7 @@ h1, h2, h3 {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    text-align: center; /* Выравнивание контента карточки по центру */
+    text-align: center;
 }
 
 .apartment-card:hover {
@@ -244,13 +239,13 @@ h1, h2, h3 {
 .apartment-card p {
     font-size: 16px;
     color: #4A2C2A;
-    padding: 0 15px; /* Добавил отступы для описания */
-    margin-bottom: 15px; /* Добавил отступ снизу */
+    padding: 0 15px;
+    margin-bottom: 15px;
 }
 
 .card-button {
-    display: block; /* Изменил на block, чтобы кнопка заняла всю ширину */
-    margin: 15px; /* Оставляем внешние отступы */
+    display: block;
+    margin: 15px;
     padding: 10px;
     background: #1A3C34;
     color: #F5E8C7;
@@ -261,6 +256,142 @@ h1, h2, h3 {
 
 .card-button:hover {
     background: #D4A017;
+}
+
+/* Раздел "О Банско" */
+#about-section {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+.lang-content {
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.lang-content.active {
+    display: block;
+}
+
+.lang-content h3 {
+    color: #3498db;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.lang-content p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.map-container {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-container h3 {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    margin: 0;
 }
 
 /* Футер */
@@ -291,26 +422,3 @@ footer {
 .social-links a:hover {
     color: #D4A017;
 }
-
-/* Дополнительные стили для улучшения RTL */
-/* Устанавливаем базовое направление и выравнивание для всего документа через JS */
-/* Но можно добавить специфичные правила, если нужно */
-
-/* Например, для навигации и свитчера языка, если они выглядят не так в RTL */
-/*
-.navbar {
-    flex-direction: row-reverse; // Если порядок лого/ссылки/свитчер нужно изменить
-}
-.nav-links li {
-    margin-left: 0;
-    margin-right: 30px; // Меняем отступ для RTL
-}
-.language-switcher {
-    margin-left: 0;
-    margin-right: 20px; // Меняем отступ для RTL
-}
-.ltr-num {
-    direction: ltr;
-    display: inline-block;
-}
-*/
