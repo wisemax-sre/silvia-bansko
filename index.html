@@ -6,13 +6,6 @@
     <title>דירות בבנסקו</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        /* Добавлено для правильного отображения LTR контента */
-        .ltr-num {
-            direction: ltr;
-            display: inline-block;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -132,7 +125,7 @@
                 <li data-lang="fourth-floor-12-b" class="sold">12-Б: דירת שלושה חדרים, <span class="ltr-num">75.16</span> מ"ר - נמכר</li>
                 <li data-lang="fourth-floor-13-b">13-Б: דירת שלושה חדרים, <span class="ltr-num">67.39</span> מ"ר, <span class="ltr-num">מחיר לפי בקשה</span> - זמין</li>
                 <li data-lang="fourth-floor-14-b" class="sold">14-Б: סטודיו, <span class="ltr-num">48.28</span> מ"ר - נמכר</li>
-                <li data-lang="fourth-floor-15-b">15-Б: סטודיו, <span class="ltr-num">53.05</span> מ"ר, <span class="ltr-num">€ 45 093</span> - זמין</li>
+                <li data-lang="fourth-floor-15-b">15-Б: סטודיו, <span class="ltr-num">53.05</span> м"р, <span class="ltr-num">€ 45 093</span> - זמין</li>
             </ul>
         </div>
 
@@ -150,10 +143,79 @@
     </section>
 
     <section id="about-section" class="section">
-        <h2 data-lang="about-title">על בנסקו</h2>
-        <p data-lang="about-description">בנסקו היא עיירה יפהפייה בדרום-מערב בולגריה, הידועה בזכות אתר הסקי שלה ובארכיטקטורה המסורתית. ממוקמת למרגלות הרי פירין, היא מציעה נופים עוצרי נשימה ופעילויות חוץ כל השנה.</p>
-        <img src="https://via.placeholder.com/800x400?text=תמונה+של+הבית+בבנסקו" alt="תמונה של הבית בבנסקו">
-        <p><i>(כאן תהיה מפה - יש להכניס קוד הטמעה תקין של גוגל מפות)</i></p>
+        <h2 data-lang="about-title" class="section-title">על בנסקו</h2>
+        
+        <div class="image-carousel">
+            <div class="carousel-item active">
+                <img src="images/bansko-main-square.jpg" alt="הכיכר המרכזית בבנסקו" class="carousel-image">
+                <p class="image-caption" data-lang="square-caption">הכיכר המרכזית עם השעון המפורסם</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bansko-church.jpg" alt="כנסיית הקדושה שלושת" class="carousel-image">
+                <p class="image-caption" data-lang="church-caption">כנסיית הקדושה שלושת - סמל היסטורי</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bansko-gondola.jpg" alt="הרכבל בבנסקו" class="carousel-image">
+                <p class="image-caption" data-lang="gondola-caption">הרכבל המוביל אל מסלולי הסקי</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bansko-mountains.jpg" alt="הרי פירין" class="carousel-image">
+                <p class="image-caption" data-lang="mountains-caption">הנוף המרהיב של הרי פירין</p>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-btn" onclick="moveCarousel(-1)">❮</button>
+                <button class="next-btn" onclick="moveCarousel(1)">❯</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="setCarouselItem(0)"></span>
+                <span class="indicator" onclick="setCarouselItem(1)"></span>
+                <span class="indicator" onclick="setCarouselItem(2)"></span>
+                <span class="indicator" onclick="setCarouselItem(3)"></span>
+            </div>
+        </div>
+
+        <div class="lang-content he-content active">
+            <h3 data-lang="resort-title">אתר נופש מושלם לכל עונות השנה</h3>
+            <p data-lang="bansko-desc-1">בנסקו היא עיירת סקי מובילה בבולגריה, ממוקמת למרגלות הרי פירין המרהיבים. בחורף, האתר מציע למעלה מ-75 ק"מ של מסלולי סקי מגוונים המתאימים לכל רמות המיומנות, מתחילים ועד מקצוענים. מערכת הרכבלים המודרנית מאפשרת גישה קלה לאזורי הסקי, כאשר הרכבל המרכזי מוביל מהעיר אל תחנת הבסיס במהירות ובנוחות.</p>
+            <p data-lang="bansko-desc-2">אך בנסקו היא הרבה יותר מאשר רק אתר סקי חורפי. בקיץ, האזור הופך לגן עדן למטיילים, עם מסלולי הליכה מרהיבים בפארק הלאומי פירין (אתר מורשת עולמית של אונסק"ו). האקלים הנעים מושך מבקרים שמחפשים מפלט מהחום, עם אפשרויות לרכיבה על אופניים, טיפוס הרים, רפטינג, רכיבה על סוסים ועוד.</p>
+            <h3 data-lang="culture-title">תרבות ומסורת</h3>
+            <p data-lang="bansko-desc-3">המרכז ההיסטורי של בנסקו שומר על האדריכלות המסורתית הבולגרית, עם בתי אבן עתיקים ורחובות מרוצפים. המבקרים יכולים ליהנות ממסעדות מסורתיות ('מכני') המציעות מאכלים בולגריים אותנטיים וחווית אירוח חמה. פסטיבלים מסורתיים מתקיימים לאורך השנה, כולל פסטיבל הג'אז הבינלאומי המפורסם של בנסקו בקיץ.</p>
+            <h3 data-lang="investment-title">מיקום השקעה מצוין</h3>
+            <p data-lang="bansko-desc-4">בנסקו מציעה איזון מושלם בין איכות חיים גבוהה ועלויות מחיה נמוכות. הנגישות הטובה (2 שעות נסיעה מסופיה, 3 שעות מסלוניקי), התשתיות המודרניות והמחירים האטרקטיביים הופכים את בנסקו ליעד מבוקש עבור משקיעי נדל"ן ורוכשי בתי נופש. המחירים האטרקטיביים בהשוואה לאתרי סקי במערב אירופה מציעים ערך מצוין למשקיעים וקונים.</p>
+        </div>
+
+        <div class="lang-content ru-content">
+            <h3 data-lang="resort-title-ru">Идеальный курорт для всех сезонов</h3>
+            <p data-lang="bansko-desc-1-ru">Банско - ведущий горнолыжный курорт Болгарии, расположенный у подножия впечатляющих гор Пирин. Зимой курорт предлагает более 75 км разнообразных лыжных трасс, подходящих для всех уровней подготовки, от начинающих до профессионалов. Современная система подъемников обеспечивает легкий доступ к зонам катания, а главная гондола быстро и комфортно доставляет из города на базовую станцию.</p>
+            <p data-lang="bansko-desc-2-ru">Но Банско - это гораздо больше, чем просто зимний горнолыжный курорт. Летом этот район превращается в рай для туристов с потрясающими пешеходными маршрутами в Национальном парке Пирин (объект Всемирного наследия ЮНЕСКО). Приятный климат привлекает посетителей, ищущих спасения от жары, с возможностями для езды на велосипеде, скалолазания, рафтинга, верховой езды и многого другого.</p>
+            <h3 data-lang="culture-title-ru">Культура и традиции</h3>
+            <p data-lang="bansko-desc-3-ru">Исторический центр Банско сохраняет традиционную болгарскую архитектуру со старинными каменными домами и мощеными улицами. Посетители могут насладиться традиционными ресторанами ('механи'), предлагающими аутентичные болгарские блюда и теплое гостеприимство. В течение года проводятся традиционные фестивали, включая знаменитый Международный джазовый фестиваль Банско летом.</p>
+            <h3 data-lang="investment-title-ru">Отличное место для инвестиций</h3>
+            <p data-lang="bansko-desc-4-ru">Банско предлагает идеальный баланс между высоким качеством жизни и низкой стоимостью проживания. Хорошая доступность (2 часа езды от Софии, 3 часа от Салоников), современная инфраструктура и привлекательные цены делают Банско востребованным направлением для инвесторов в недвижимость и покупателей курортных домов. Привлекательные цены по сравнению с горнолыжными курортами Западной Европы предлагают отличную ценность для инвесторов и покупателей.</p>
+        </div>
+
+        <div class="lang-content bg-content">
+            <h3 data-lang="resort-title-bg">Перфектен курорт за всички сезони</h3>
+            <p data-lang="bansko-desc-1-bg">Банско е водещ ски курорт в България, разположен в подножието на впечатляващите Пирински планини. През зимата курортът предлага над 75 км разнообразни писти, подходящи за всички нива на умения, от начинаещи до експерти. Модерната система от лифтове осигурява лесен достъп до ски зоните, като основната гондола бързо и удобно превозва от града до базовата станция.</p>
+            <p data-lang="bansko-desc-2-bg">Но Банско е много повече от просто зимен ски курорт. През лятото районът се превръща в рай за туристите с впечатляващи пешеходни маршрути в Национален парк Пирин (обект на световното наследство на ЮНЕСКО). Приятният климат привлича посетители, търсещи спасение от жегата, с възможности за колоездене, катерене, рафтинг, езда и много други.</p>
+            <h3 data-lang="culture-title-bg">Култура и традиции</h3>
+            <p data-lang="bansko-desc-3-bg">Историческият център на Банско запазва традиционната българска архитектура със старинни каменни къщи и павирани улици. Посетителите могат да се насладят на традиционни ресторанти ('механи'), предлагащи автентични български ястия и топло гостоприемство. През годината се провеждат традиционни фестивали, включително известния Международен джаз фестивал в Банско през лятото.</p>
+            <h3 data-lang="investment-title-bg">Отлично място за инвестиции</h3>
+            <p data-lang="bansko-desc-4-bg">Банско предлага перфектен баланс между високо качество на живот и ниски разходи за живеене. Добрата достъпност (2 часа път от София, 3 часа от Солун), модерната инфраструктура и атрактивните цени правят Банско търсена дестинация за инвеститори в недвижими имоти и купувачи на ваканционни домове. Атрактивните цени в сравнение със ски курортите в Западна Европа предлагат отлична стойност за инвеститорите и купувачите.</p>
+        </div>
+
+        <div class="map-container">
+            <h3 data-lang="location-title">מיקום</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23930.93428798722!2d23.467876!3d41.838103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14abafc0450e8d59%3A0x20d168fd36e70cfc!2z15HXoNeh16fXlSwg15HXldecl9rXqNeZ15Q!5e0!3m2!1siw!2sil!4v1680000000000!5m2!1siw!2sil" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </section>
 
     <section id="contacts-section" class="section">
@@ -176,5 +238,54 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+        
+        function moveCarousel(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            setCarouselItem(currentSlide);
+        }
+        
+        function setCarouselItem(index) {
+            document.querySelectorAll('.carousel-item').forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+            
+            document.querySelectorAll('.indicator').forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+        
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+        
+        function updateLanguageContent() {
+            const selectedLang = document.getElementById('language').value;
+            
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            if (selectedLang === 'he') {
+                document.querySelector('.he-content').classList.add('active');
+            } else if (selectedLang === 'ru') {
+                document.querySelector('.ru-content').classList.add('active');
+            } else if (selectedLang === 'bg') {
+                document.querySelector('.bg-content').classList.add('active');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateLanguageContent);
+        
+        const origChangeLanguage = window.changeLanguage || function() {};
+        window.changeLanguage = function() {
+            origChangeLanguage();
+            updateLanguageContent();
+        };
+    </script>
 </body>
 </html>
