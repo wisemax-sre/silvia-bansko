@@ -3,6 +3,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F5E8C7;
     color: #1A3C34;
+    /* Направление и выравнивание текста теперь устанавливаются в JS
+       в зависимости от языка (через dir='rtl'/'ltr' на <html>),
+       так что эти правила здесь не строго обязательны, но не мешают */
     direction: rtl;
     text-align: right;
 }
@@ -11,11 +14,7 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-.ltr {
-    direction: ltr;
-    unicode-bidi: plaintext;
-    display: inline-block;
-}
+/* --- БЛОК .ltr УДАЛЕН ОТСЮДА --- */
 
 /* Шапка */
 .navbar {
@@ -43,7 +42,8 @@ h1, h2, h3 {
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 30px; /* Для RTL лучше использовать margin-right, если элементы идут справа налево */
+    /* Если порядок ссылок в HTML правильный для RTL, можно оставить margin-left */
 }
 
 .nav-links a {
@@ -59,7 +59,8 @@ h1, h2, h3 {
 
 /* Переключатель языков */
 .language-switcher {
-    margin-left: 20px;
+    margin-left: 20px; /* Для RTL лучше использовать margin-right */
+    /* Возможно, потребуется: margin-right: 20px; margin-left: 0; */
 }
 
 .language-switcher select {
@@ -94,7 +95,7 @@ h1, h2, h3 {
 .hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #000;
+    color: #000; /* Черный цвет для подзаголовка может плохо читаться на фото */
 }
 
 .cta-button {
@@ -117,7 +118,7 @@ h1, h2, h3 {
 .section {
     display: none;
     padding: 60px 20px;
-    text-align: center;
+    text-align: center; /* Остается для выравнивания заголовков секций */
 }
 
 .section.active {
@@ -165,7 +166,7 @@ h1, h2, h3 {
 
 .floor-tab-content {
     display: none;
-    text-align: center;
+    text-align: center; /* Выравнивание по центру для картинок и описания */
 }
 
 .floor-tab-content.active {
@@ -193,7 +194,8 @@ h1, h2, h3 {
 .apartments-list li {
     padding: 15px;
     border-bottom: 1px solid #ddd;
-    text-align: center;
+    /* text-align: center; Убрал центр, т.к. у нас dir=rtl на <html>, текст выровняется по правому краю */
+    /* --- СТРОКА direction: ltr; УДАЛЕНА ОТСЮДА --- */
 }
 
 .apartments-list li:last-child {
@@ -221,6 +223,7 @@ h1, h2, h3 {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    text-align: center; /* Выравнивание контента карточки по центру */
 }
 
 .apartment-card:hover {
@@ -241,11 +244,13 @@ h1, h2, h3 {
 .apartment-card p {
     font-size: 16px;
     color: #4A2C2A;
+    padding: 0 15px; /* Добавил отступы для описания */
+    margin-bottom: 15px; /* Добавил отступ снизу */
 }
 
 .card-button {
-    display: block;
-    margin: 15px;
+    display: block; /* Изменил на block, чтобы кнопка заняла всю ширину */
+    margin: 15px; /* Оставляем внешние отступы */
     padding: 10px;
     background: #1A3C34;
     color: #F5E8C7;
@@ -286,6 +291,22 @@ footer {
 .social-links a:hover {
     color: #D4A017;
 }
-.apartments-list li {
-    direction: ltr;
+
+/* Дополнительные стили для улучшения RTL */
+/* Устанавливаем базовое направление и выравнивание для всего документа через JS */
+/* Но можно добавить специфичные правила, если нужно */
+
+/* Например, для навигации и свитчера языка, если они выглядят не так в RTL */
+/*
+.navbar {
+    flex-direction: row-reverse; // Если порядок лого/ссылки/свитчер нужно изменить
 }
+.nav-links li {
+    margin-left: 0;
+    margin-right: 30px; // Меняем отступ для RTL
+}
+.language-switcher {
+    margin-left: 0;
+    margin-right: 20px; // Меняем отступ для RTL
+}
+*/
